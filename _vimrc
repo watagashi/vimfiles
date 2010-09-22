@@ -1,4 +1,4 @@
-" vim: set ts=4 sw=4 et:
+" vim: set ts=4 sw=4 et ff=unix:
 if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
@@ -56,6 +56,8 @@ command! -bar -nargs=0 Ypath let @*=expand('%:p')
 if has('win32')
     command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"C:\Program Files\java\jdk1.6.0_21\bin\native2ascii.exe" <args>
 endif
+
+command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
 
 "nnoremap n nzz
 "nnoremap N Nzz
