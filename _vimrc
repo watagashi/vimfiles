@@ -88,6 +88,9 @@ if v:version < 700
 endif
 let g:CVSCommandDiffOpt='wbBu'
 let g:VCSCommandCVSDiffOpt='wbBu'
+if has('win32') 
+    let $PATH=$PATH . ';' . $ProgramFiles . '\\Git\\bin'
+endif
 
 " GetScript
 let g:GetLatestVimScripts_wget='curl'
