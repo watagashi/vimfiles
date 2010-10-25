@@ -5,6 +5,9 @@ if filereadable( $HOME . '/My Documents/My Internet Disk/_gvimrc' )
 	so ~/My\ Documents/My\ Internet\ Disk/_gvimrc
 	finish
 endif
+if has( 'gui_gtk2' )
+  set guifont=Monospace\ 12
+endif
 "set guifont=Terminal:h14:cSHIFTJIS
 
 " vim:set ts=8 sts=2 sw=2 tw=0:
