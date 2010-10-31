@@ -111,5 +111,6 @@ let g:user_zen_settings = {'lang':'ja'}
 let twitvim_count = 100
 if has('win32')
     let twitvim_browser_cmd = 'C:\\Program Files\\Opera\\opera.exe'
+endif
 
 colorscheme desert
