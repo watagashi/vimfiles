@@ -1,3 +1,4 @@
+scriptencoding cp932
 " twada
 
 " Only do this when not done yet for this buffer
