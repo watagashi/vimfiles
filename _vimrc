@@ -21,7 +21,9 @@ set listchars+=tab:>-
 set path+=./**,**
 set diffopt+=iwhite
 set printoptions+=formfeed:y
-set wildignorecase
+if (version == 703 && has("patch72")) || version > 703
+    set wildignorecase
+endif
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
