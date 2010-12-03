@@ -21,6 +21,7 @@ set listchars+=tab:>-
 set path+=./**,**
 set diffopt+=iwhite
 set printoptions+=formfeed:y
+set wildignorecase
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
