@@ -3,14 +3,9 @@ if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
 
-if filereadable( $HOME . '/My\ Documents/My\ Internet\ Disk/_vimrc' )
-	so ~/My\ Documents/My\ Internet\ Disk/_vimrc
-	finish
-endif
-
 " vim: set ts=4 sw=4 et:
-set directory=>$TEMP,C:\\TEMP\vim
-"set backupdir=>$TEMP,C:\\TEMP\vim
+set directory=$TEMP
+"set backupdir=$TEMP
 set nobackup
 set tags=$VIM/tags,./tags;/,tags
 set dictionary=$VIMRUNTIME/GENE.TXT
