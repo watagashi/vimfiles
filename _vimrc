@@ -111,4 +111,9 @@ if has('win32')
     let twitvim_browser_cmd = 'C:\\Program Files\\Opera\\opera.exe'
 endif
 
+" skk
+let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
+let g:skk_show_annotation=1
+let g:skk_egg_like_newline=1
+
 colorscheme desert
