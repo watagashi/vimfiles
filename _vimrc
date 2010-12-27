@@ -29,7 +29,7 @@ if has("autocmd")
 	autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
 endif
 
-command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& | norm zE
+command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& cursorbind< | norm zE
 command! -bar -nargs=0 PrintFileInfo echo strftime( '%c' ,getftime( expand( '%' ) ) ) . " " . getfsize( expand( '%' ) ) . " Bytes"
 command! -bar -nargs=0 Izon runtime macros/izon.vim
 command! -bar -nargs=0 Vime execute 'source ~/vimfiles/macros/vime2.vim'
