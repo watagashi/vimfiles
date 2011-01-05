@@ -113,8 +113,7 @@ if has('win32')
 endif
 
 " skk
-let g:skk_large_jisyo = "/usr/local/share/skk/SKK-JISYO.L"
-if filereadable( "~/vimfiles/dict/SKK-JISYO.L" )
+if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
     let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
 endif
 let g:skk_show_annotation=1
