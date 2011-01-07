@@ -55,8 +55,6 @@ if has('win32')
     command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"C:\Program Files\java\jdk1.6.0_21\bin\native2ascii.exe" <args>
 endif
 
-command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
-
 "nnoremap n nzz
 "nnoremap N Nzz
 "nnoremap * *zz
@@ -80,16 +78,18 @@ let g:explDetailedList=1
 let g:explDateFormat="%x %X"
 let g:netrw_fastbrowse=2
 
-" CVSCommand
+" vcscommand
+" http://www.vim.org/scripts/script.php?script_id=90
 if v:version < 700
     let g:VCSCommandDisableAll = 1
 endif
-let g:CVSCommandDiffOpt='wbBu'
-let g:VCSCommandCVSDiffOpt='wbBu'
+let g:CVSCommandDiffOpt='bBu'
+let g:VCSCommandCVSDiffOpt='bBu'
 if has('win32') 
     let $PATH=$PATH . ';' . $ProgramFiles . '\\Git\\bin'
 endif
 let $HGENCODING=&encoding
+command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
 
 " GetScript
 let g:GetLatestVimScripts_wget='curl'
@@ -104,19 +104,26 @@ if has('win32') && has('multi_lang') && v:lang == 'ja' && &encoding != 'cp932'
 endif
 
 " zen-coding
+" http://www.vim.org/scripts/script.php?script_id=2981
 let g:user_zen_settings = {'lang':'ja'}
 
 " TwitVim
+" http://www.vim.org/scripts/script.php?script_id=2204
 let twitvim_count = 100
 if has('win32')
     let twitvim_browser_cmd = 'C:\\Program Files\\Opera\\opera.exe'
 endif
 
 " skk
+" http://www.vim.org/scripts/script.php?script_id=3118
 if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
     let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
 endif
 let g:skk_show_annotation=1
 let g:skk_egg_like_newline=1
+
+" diffchanges.vim
+" http://www.vim.org/scripts/script.php?script_id=2158
+let g:diffchanges_patch_cmd = 'diff -ubB'
 
 colorscheme desert
