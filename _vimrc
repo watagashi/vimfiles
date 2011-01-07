@@ -123,4 +123,8 @@ endif
 let g:skk_show_annotation=1
 let g:skk_egg_like_newline=1
 
+" diffchanges.vim
+" http://www.vim.org/scripts/script.php?script_id=2158
+let g:diffchanges_patch_cmd = 'diff -ubB'
+
 colorscheme desert
