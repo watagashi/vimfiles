@@ -80,7 +80,8 @@ let g:explDetailedList=1
 let g:explDateFormat="%x %X"
 let g:netrw_fastbrowse=2
 
-" CVSCommand
+" vcscommand
+" http://www.vim.org/scripts/script.php?script_id=90
 if v:version < 700
     let g:VCSCommandDisableAll = 1
 endif
@@ -104,15 +105,18 @@ if has('win32') && has('multi_lang') && v:lang == 'ja' && &encoding != 'cp932'
 endif
 
 " zen-coding
+" http://www.vim.org/scripts/script.php?script_id=2981
 let g:user_zen_settings = {'lang':'ja'}
 
 " TwitVim
+" http://www.vim.org/scripts/script.php?script_id=2204
 let twitvim_count = 100
 if has('win32')
     let twitvim_browser_cmd = 'C:\\Program Files\\Opera\\opera.exe'
 endif
 
 " skk
+" http://www.vim.org/scripts/script.php?script_id=3118
 let g:skk_large_jisyo = "/usr/local/share/skk/SKK-JISYO.L"
 if filereadable( "~/vimfiles/dict/SKK-JISYO.L" )
     let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
