@@ -55,8 +55,6 @@ if has('win32')
     command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"C:\Program Files\java\jdk1.6.0_21\bin\native2ascii.exe" <args>
 endif
 
-command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
-
 "nnoremap n nzz
 "nnoremap N Nzz
 "nnoremap * *zz
@@ -85,12 +83,13 @@ let g:netrw_fastbrowse=2
 if v:version < 700
     let g:VCSCommandDisableAll = 1
 endif
-let g:CVSCommandDiffOpt='wbBu'
-let g:VCSCommandCVSDiffOpt='wbBu'
+let g:CVSCommandDiffOpt='bBu'
+let g:VCSCommandCVSDiffOpt='bBu'
 if has('win32') 
     let $PATH=$PATH . ';' . $ProgramFiles . '\\Git\\bin'
 endif
 let $HGENCODING=&encoding
+command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
 
 " GetScript
 let g:GetLatestVimScripts_wget='curl'
