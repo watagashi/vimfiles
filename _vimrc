@@ -90,7 +90,7 @@ endif
 let g:CVSCommandDiffOpt='bBu'
 let g:VCSCommandCVSDiffOpt='bBu'
 if has('win32') 
-    let $PATH=$PATH . ';' . $ProgramFiles . '\\Git\\bin'
+    let $PATH=$PATH . ';' . $ProgramFiles . '\Git\bin'
 endif
 let $HGENCODING=&encoding
 command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
@@ -115,7 +115,7 @@ let g:user_zen_settings = {'lang':'ja'}
 " http://www.vim.org/scripts/script.php?script_id=2204
 let twitvim_count = 100
 if has('win32')
-    let twitvim_browser_cmd = 'C:\\Program Files\\Opera\\opera.exe'
+    let twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
 endif
 
 " skk
