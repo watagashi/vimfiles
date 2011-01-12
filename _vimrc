@@ -117,6 +117,9 @@ let twitvim_count = 100
 if has('win32')
     let twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
 endif
+if has('python')
+    let twitvim_enable_python = 1
+endif
 
 " skk
 " http://www.vim.org/scripts/script.php?script_id=3118
