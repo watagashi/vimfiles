@@ -43,6 +43,7 @@ doc/matchit.txt
 dict/SKK-JISYO.L
 doc/taglist.txt
 doc/tags
+doc/tags-*
 doc/tail.txt
 doc/textile.txt
 ftplugin/conf.vim
