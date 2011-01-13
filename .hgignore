@@ -7,6 +7,26 @@ syntax: glob
 .VimballRecord
 .netrwhist
 
+# vcscommand.vim
+doc/vcs*.txt
+plugin/vcs*.vim
+syntax/vcs*.vim
+syntax/*annotate.vim
+
+# zencoding.vim
+autoload/zencoding.vim
+doc/zencoding.txt
+plugin/zencoding.vim
+
+# skk.vim
+doc/skk.jax
+plugin/skk.vim
+syntax/skk.vim
+
+# twitvim.vim
+doc/twitvim.txt
+plugin/twitvim.vim
+
 GetLatest/GetLatestVimScripts.dat
 autoload/Align.vim
 autoload/AlignMaps.vim
@@ -14,22 +34,17 @@ autoload/SQLUtilities.vim
 autoload/dbext.vim
 autoload/dbext_dbi.vim
 autoload/tail.vim
-autoload/zencoding.vim
-dict/SKK-JISYO.L
 doc/Align.txt
 doc/SQLUtilities.txt
 doc/dbext.txt
 doc/dbext_gpl.dat
 doc/headline.txt
 doc/matchit.txt
-doc/skk.jax
+dict/SKK-JISYO.L
 doc/taglist.txt
 doc/tags
 doc/tail.txt
 doc/textile.txt
-doc/twitvim.txt
-doc/vcscommand.txt
-doc/zencoding.txt
 ftplugin/conf.vim
 ftplugin/ipmsg.vim
 ftplugin/log.vim
@@ -50,28 +65,11 @@ plugin/matchit.vim
 plugin/sco.vim
 plugin/sco_command_feature.sco
 plugin/sco_keys.vim
-plugin/skk.vim
 plugin/taglist.vim
 plugin/tail.vim
 plugin/textile.vim
-plugin/twitvim.vim
-plugin/vcsbzr.vim
-plugin/vcscommand.vim
-plugin/vcscvs.vim
-plugin/vcsgit.vim
-plugin/vcshg.vim
-plugin/vcssvk.vim
-plugin/vcssvn.vim
 plugin/vimirc.vim
-plugin/zencoding.vim
 spell/**
-syntax/cvsannotate.vim
-syntax/gitannotate.vim
-syntax/hgannotate.vim
 syntax/ipmsg.vim
-syntax/skk.vim
-syntax/svkannotate.vim
-syntax/svnannotate.vim
 syntax/textile.vim
-syntax/vcscommit.vim
 tail_options.vim
