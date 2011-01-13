@@ -2,6 +2,7 @@
 "
 " Windows 環境で数値から始まるディレクトリ名への対応
 " ルートディレクトリへの対応
+scriptencoding cp932
 
 if !exists('+shellslash')
     finish
