@@ -2,6 +2,10 @@
 if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
+if $TERM == 'cygwin'
+    set term=builtin_pcansi
+    set encoding=cp932
+endif
 
 " vim: set ts=4 sw=4 et:
 set directory=$TEMP
