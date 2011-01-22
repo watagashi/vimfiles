@@ -75,6 +75,8 @@ if has('win32')
     endif
 endif
 
+command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
+
 "nnoremap n nzz
 "nnoremap N Nzz
 "nnoremap * *zz
