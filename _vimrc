@@ -149,4 +149,9 @@ let g:skk_egg_like_newline=1
 " http://www.vim.org/scripts/script.php?script_id=2158
 let g:diffchanges_patch_cmd = 'diff -ubB'
 
+" taglist.vim
+" http://www.vim.org/scripts/script.php?script_id=273
+let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
+                           \ 'v:variable;f:function'
+"
 colorscheme desert
