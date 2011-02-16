@@ -75,7 +75,7 @@ if has('win32')
     if exists('$JAVA_HOME')
         execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $JAVA_HOME . '\bin\native2ascii.exe" <args>'
     else
-        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $ProgramFiles . '\java\jdk1.6.0_23\bin\native2ascii.exe" <args>'
+        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $ProgramFiles . '\java\jdk1.6.0_24\bin\native2ascii.exe" <args>'
     endif
 endif
 
