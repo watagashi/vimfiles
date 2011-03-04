@@ -111,8 +111,13 @@ if v:version < 700
 endif
 let g:CVSCommandDiffOpt='bBu'
 let g:VCSCommandCVSDiffOpt='bBu'
-if has('win32') 
-    let $PATH=$PATH . ';' . $ProgramFiles . '\Git\bin'
+" msysGit
+if executable($ProgramFiles . '\Git\bin\git.exe')
+    let g:VCSCommandGitExec= $ProgramFiles . '\Git\bin\git.exe'
+endif
+" TortoiseHg for Windows
+if executable($ProgramFiles . '\TortoiseHg\hg.exe')
+    let g:VCSCommandHGExec= $ProgramFiles . '\TortoiseHg\hg.exe'
 endif
 let $HGENCODING=&encoding
 command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
