@@ -164,5 +164,9 @@ let g:diffchanges_patch_cmd = 'diff -ubB'
 " http://www.vim.org/scripts/script.php?script_id=273
 let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
                            \ 'v:variable;f:function'
-"
+
+" autofmt
+" http://www.vim.org/scripts/script.php?script_id=1939
+set formatexpr=autofmt#compat#formatexpr()
+
 colorscheme desert
