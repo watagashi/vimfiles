@@ -116,7 +116,7 @@ if executable($ProgramFiles . '\Git\bin\git.exe')
     let g:VCSCommandGitExec= $ProgramFiles . '\Git\bin\git.exe'
 endif
 " TortoiseHg for Windows
-if executable($ProgramFiles . '\TortoiseHg\hg.exe')
+if executable($ProgramFiles . '\TortoiseHg\hg.exe') && executable($ProgramFiles . '\TortoiseHg\bin\hg.cmd')
     let g:VCSCommandHGExec= $ProgramFiles . '\TortoiseHg\hg.exe'
 endif
 let $HGENCODING=&encoding
