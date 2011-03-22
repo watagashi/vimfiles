@@ -169,4 +169,6 @@ let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
 " http://www.vim.org/scripts/script.php?script_id=1939
 set formatexpr=autofmt#compat#formatexpr()
 
+let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-creole"
+
 colorscheme desert
