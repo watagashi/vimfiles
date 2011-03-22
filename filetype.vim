@@ -8,5 +8,6 @@ augroup filetypedetect
   au! BufNewFile,BufRead /var/adm/messages,/var/adm/messages.*[0-9]  setf messages
   " Why not exist $VIMRUNTIME/syntax/pc.vim ?
   au! BufNewFile,BufRead *.sc,*.pc	setf esqlc
+  silent! execute "so ". expand("<sfile>:p:h") . "/repos/vim-creole/ftdetect/creole.vim"
 augroup END
 " vim:set sw=2:
