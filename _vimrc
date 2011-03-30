@@ -142,7 +142,13 @@ let g:user_zen_settings = {'lang':'ja'}
 " http://www.vim.org/scripts/script.php?script_id=2204
 let twitvim_count = 100
 if has('win32')
-    let twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
+    if executable($ProgramFiles . '\Opera\opera.exe')
+        let twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
+    elseif executable($ProgramFiles . '\Mozilla Firefox\firefox.exe')
+        let twitvim_browser_cmd = $ProgramFiles . '\Mozilla Firefox\firefox.exe'
+    else
+        let twitvim_browser_cmd = $ProgramFiles . '\Internet Explorer\iexplore.exe'
+    endif
 endif
 if has('python')
     let twitvim_enable_python = 1
