@@ -2,6 +2,10 @@ if exists("did_load_filetypes")
   finish
 endif
 augroup filetypedetect
+  au! BufNewFile,BufRead *.cls
+	\ if getline(1) =~ '^VERSION 1.0 CLASS' |
+	\   setf vb |
+	\ endif
   au! BufNewFile,BufRead *.vbe		setf vb
   au! BufNewFile,BufRead *.log		setf log
   au! BufNewFile,BufRead *.inc		set filetype=aspvbs
