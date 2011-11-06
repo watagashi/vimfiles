@@ -129,11 +129,6 @@ let g:GetLatestVimScripts_wget='curl'
 " let g:changelog_timeformat='%c'
 let g:changelog_username=$username
 
-if has('win32') && has('multi_lang') && v:lang == 'ja' && &encoding != 'cp932'
-    set encoding=cp932
-    "set fileencoding=cp932
-endif
-
 " zen-coding
 " http://www.vim.org/scripts/script.php?script_id=2981
 let g:user_zen_settings = {'lang':'ja'}
