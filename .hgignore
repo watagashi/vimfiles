@@ -27,6 +27,11 @@ syntax/skk.vim
 doc/twitvim.txt
 plugin/twitvim.vim
 
+# Markdown syntax - Syntax file for Markdown text-to-HTML language : vim online
+# http://www.vim.org/scripts/script.php?script_id=1242
+ftplugin\mkd.vim
+syntax\mkd.vim
+
 GetLatest/GetLatestVimScripts.dat
 autoload/Align.vim
 autoload/AlignMaps.vim
