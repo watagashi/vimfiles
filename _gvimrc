@@ -31,6 +31,11 @@ if has( 'win32' )
   "command! -bar Scrs set columns=80 lines=25
   "command! -bar ND set columns=80 lines=25 guifont=ＭＳ_ゴシック:h12:cSHIFTJIS
   "command! -bar HD set guifont=ＭＳ_ゴシック:h9:cSHIFTJIS columns=136 lines=48 
+
+  " Vim technique bible pp.39
+  let g:IMState = 0
+  autocmd InsertEnter * let &iminsert = g:IMState
+  autocmd InsertLeave * let g:IMState = &iminsert|set iminsert=0 imsearch=0
 endif
 
 "colorscheme evening
