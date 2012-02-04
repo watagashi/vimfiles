@@ -1,4 +1,6 @@
-" vim:set ts=8 sts=2 sw=2 tw=0:
+scriptencoding utf-8
+
+" vim:set ts=8 sts=2 sw=2 tw=0 ff=unix fenc=utf-8:
 "colorscheme evening
 colorscheme desert
 if has( 'gui_gtk2' )
@@ -14,30 +16,30 @@ endif
 "set nomousefocus
 "set linespace=2
 "set clipboard=unnamed
-" ‰½ŒÌ‚©ƒwƒbƒ_‚Ìs‚ªŸs‚Éˆì‚ê‚Ä‚µ‚Ü‚¤‚Ì‚Å (Vim 6.0ap ‚Ü‚Å)
+" ä½•æ•…ã‹ãƒ˜ãƒƒãƒ€ã®è¡ŒãŒæ¬¡è¡Œã«æº¢ã‚Œã¦ã—ã¾ã†ã®ã§ (Vim 6.0ap ã¾ã§)
 "set printerheader+=\ \ 
 
-set guioptions+=a	" Kaoriya ”Å Vim 6.1.267 ‚Ì gvimrc ‚©‚ç‚È‚­‚È‚Á‚½
+set guioptions+=a	" Kaoriya ç‰ˆ Vim 6.1.267 ã® gvimrc ã‹ã‚‰ãªããªã£ãŸ
 "nnoremap gV "*p
 "vnoremap gC "*y
 "vnoremap gX "*c
 
 if has( 'win32' )
-  command! -bar Fonts set guifont=‚l‚r_ƒSƒVƒbƒN:h9:cSHIFTJIS
-  command! -bar Fontl set guifont=‚l‚r_ƒSƒVƒbƒN:h12:cSHIFTJIS
+  command! -bar Fonts set guifont=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h9:cSHIFTJIS
+  command! -bar Fontl set guifont=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h12:cSHIFTJIS
   "command! -bar Scrl set columns=136 lines=48
   "command! -bar Scrs set columns=80 lines=25
-  "command! -bar ND set columns=80 lines=25 guifont=‚l‚r_ƒSƒVƒbƒN:h12:cSHIFTJIS
-  "command! -bar HD set guifont=‚l‚r_ƒSƒVƒbƒN:h9:cSHIFTJIS columns=136 lines=48 
+  "command! -bar ND set columns=80 lines=25 guifont=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h12:cSHIFTJIS
+  "command! -bar HD set guifont=ï¼­ï¼³_ã‚´ã‚·ãƒƒã‚¯:h9:cSHIFTJIS columns=136 lines=48 
 endif
 
 "colorscheme evening
-" Vim 6.0ap ‚©‚ç highlight clear ‚Å
-" $VIM/gvimrc ‚Ì highlight CursorIM ‚ª–³Œø‚É‚È‚é‚Ì‚Å
+" Vim 6.0ap ã‹ã‚‰ highlight clear ã§
+" $VIM/gvimrc ã® highlight CursorIM ãŒç„¡åŠ¹ã«ãªã‚‹ã®ã§
 if has('multi_byte_ime') || has('xim')
-  " IME ON‚ÌƒJ[ƒ\ƒ‹‚ÌF‚ğİ’è(İ’è—á:‡)
+  " IME ONæ™‚ã®ã‚«ãƒ¼ã‚½ãƒ«ã®è‰²ã‚’è¨­å®š(è¨­å®šä¾‹:ç´«)
   highlight CursorIM guibg=Purple guifg=NONE
-  " ‘}“üƒ‚[ƒh‚Å‚ÌIMEó‘Ô‚ğ‹L‰¯‚³‚¹‚È‚¢ê‡AŸs‚ÌƒRƒƒ“ƒg‚ğ‰ğœ
+  " æŒ¿å…¥ãƒ¢ãƒ¼ãƒ‰ã§ã®IMEçŠ¶æ…‹ã‚’è¨˜æ†¶ã•ã›ãªã„å ´åˆã€æ¬¡è¡Œã®ã‚³ãƒ¡ãƒ³ãƒˆã‚’è§£é™¤
   "inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 endif
 
