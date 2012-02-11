@@ -32,10 +32,15 @@ if has( 'win32' )
   "command! -bar ND set columns=80 lines=25 guifont=ＭＳ_ゴシック:h12:cSHIFTJIS
   "command! -bar HD set guifont=ＭＳ_ゴシック:h9:cSHIFTJIS columns=136 lines=48 
 
-  " Vim technique bible pp.39
+  " Vim technique bible 1-9 (pp.39)
   let g:IMState = 0
   autocmd InsertEnter * let &iminsert = g:IMState
   autocmd InsertLeave * let g:IMState = &iminsert|set iminsert=0 imsearch=0
+endif
+
+" Vim technique bible 2-15
+if has('clientserver')
+  runtime macros/editexisting.vim
 endif
 
 "colorscheme evening
