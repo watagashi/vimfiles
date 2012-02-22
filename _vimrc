@@ -173,5 +173,6 @@ let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
 set formatexpr=autofmt#compat#formatexpr()
 
 let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-creole"
+let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-markdown"
 
 colorscheme desert

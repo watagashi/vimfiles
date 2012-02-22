@@ -4,6 +4,8 @@ syntax: glob
 **.zip
 **.vba
 
+repos/**
+
 .VimballRecord
 .netrwhist
 
