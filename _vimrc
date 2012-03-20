@@ -83,6 +83,9 @@ endif
 
 command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 
+" Vim technique bible 4-16
+nnoremap <ESC><ESC> :nohlsearch<CR>
+
 "nnoremap n nzz
 "nnoremap N Nzz
 "nnoremap * *zz
