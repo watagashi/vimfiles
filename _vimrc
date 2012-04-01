@@ -92,6 +92,9 @@ cnoremap <expr> <C-X>dt strftime('%Y%m%d')
 cnoremap <expr> <C-X>ts strftime('%Y%m%d%H%M')
 " Vim technique bible 4-16
 nnoremap <ESC><ESC> :nohlsearch<CR>
+" Vim technique bible 5-10
+vnoremap < <gv
+vnoremap > >gv
 
 "nnoremap n nzz
 "nnoremap N Nzz
