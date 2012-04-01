@@ -83,6 +83,9 @@ endif
 
 command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 
+" Vim technique bible 3-14
+nnoremap * *N
+nnoremap # #N
 " Vim technique bible 4-1
 command! OpenTempFile :edit `=tempname()`
 cnoremap <expr> <C-X>dt strftime('%Y%m%d')
