@@ -185,6 +185,12 @@ let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
 " http://www.vim.org/scripts/script.php?script_id=1939
 set formatexpr=autofmt#compat#formatexpr()
 
+" calendar.vim
+" http://www.vim.org/scripts/script.php?script_id=52
+if isdirectory(expand("~/Documents/diary"))
+    let g:calendar_diary = "~/Documents/diary"
+endif
+
 let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-creole"
 let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-markdown"
 
