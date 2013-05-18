@@ -10,7 +10,9 @@ if $TERM == 'cygwin'
 endif
 
 " vim: set ts=4 sw=4 et:
-set directory=$TEMP
+if exists($TEMP)
+    set directory=$TEMP
+endif
 "set backupdir=$TEMP
 set nobackup
 set tags=$VIM/tags,./tags;/,tags
