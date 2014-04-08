@@ -10,9 +10,12 @@ if $TERM == 'cygwin'
 endif
 
 " vim: set ts=4 sw=4 et:
-if exists($TEMP)
+if exists("$TEMP")
     set directory=$TEMP
     set undodir=$TEMP
+elseif exists("$TMPDIR")
+    set directory=$TMPDIR
+    set undodir=$TMPDIR
 endif
 "set backupdir=$TEMP
 set nobackup
