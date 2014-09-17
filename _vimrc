@@ -4,6 +4,10 @@ scriptencoding utf-8
 if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
+if filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
+    source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
+    execute pathogen#infect()
+endif
 if $TERM == 'cygwin'
     set term=builtin_pcansi
     set encoding=cp932
