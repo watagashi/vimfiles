@@ -5,6 +5,10 @@ syntax: glob
 **.vba
 
 repos/**
+bundle/**
+**.DS_Store
+**.un~
+**.sw?
 
 .VimballRecord
 .netrwhist
