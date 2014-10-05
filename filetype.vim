@@ -15,6 +15,7 @@ augroup filetypedetect
   " http://www.vim.org/scripts/script.php?script_id=1327
   au! BufNewFile,BufRead *.ps1		setf ps1
   au! BufNewFile,BufRead *.ddl		setf sql
+  au! BufNewFile,BufRead *.tss		setf javascript
   silent! execute "so ". expand("<sfile>:p:h") . "/repos/vim-creole/ftdetect/creole.vim"
 augroup END
 " vim:set sw=2:
