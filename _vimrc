@@ -76,7 +76,7 @@ command! -bar -nargs=0 -range=% Requote silent! <line1>,<line2>s/^> >/>>/ | nohl
 command! -bar -nargs=0 Dquote .,/^-- $/-2del | nohl
 command! -bar -nargs=0 -range Htmlencode silent! <line1>,<line2>s/&/\&amp;/g | <line1>,<line2>s/</\&lt;/g | silent! <line1>,<line2>s/>/\&gt;/g | silent! <line1>,<line2>s/"/\&quot;/g | nohl | norm ``
 
-command! -bar -nargs=1 Settabs setl ts=<args> sw=<args>
+command! -bar -nargs=1 Settabs setl ts=<args> sw=<args> et
 
 command! -bar -nargs=0 Fold setl fdm=syntax fdc=12
 command! -bar -nargs=0 NoFold setl fdm& fdc&
