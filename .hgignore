@@ -13,38 +13,12 @@ bundle/**
 .VimballRecord
 .netrwhist
 
-# vcscommand.vim
-doc/vcs*.txt
-plugin/vcs*.vim
-syntax/vcs*.vim
-syntax/*annotate.vim
-
-# zencoding.vim
-autoload/zencoding.vim
-doc/zencoding.txt
-plugin/zencoding.vim
-
-# skk.vim
-doc/skk.jax
-plugin/skk.vim
-syntax/skk.vim
-
-# twitvim.vim
-doc/twitvim.txt
-plugin/twitvim.vim
-
-# Markdown syntax - Syntax file for Markdown text-to-HTML language : vim online
-# http://www.vim.org/scripts/script.php?script_id=1242
-ftplugin\mkd.vim
-syntax\mkd.vim
-
 GetLatest/GetLatestVimScripts.dat
 autoload/Align.vim
 autoload/AlignMaps.vim
 autoload/SQLUtilities.vim
 autoload/dbext.vim
 autoload/dbext_dbi.vim
-autoload/tail.vim
 doc/Align.txt
 doc/SQLUtilities.txt
 doc/dbext.txt
@@ -52,36 +26,26 @@ doc/dbext_gpl.dat
 doc/headline.txt
 doc/matchit.txt
 dict/SKK-JISYO.L
-doc/taglist.txt
 doc/tags
 doc/tags-*
-doc/tail.txt
-doc/textile.txt
 ftplugin/conf.vim
 ftplugin/ipmsg.vim
 ftplugin/log.vim
-ftplugin/textile.vim
 macros/vim-tail.zsh
 macros/vime2.vim
 plugin/AlignMapsPlugin.vim
 plugin/AlignPlugin.vim
 plugin/SQLUtilities.vim
-plugin/calendar.vim
 plugin/cecutil.vim
 plugin/cmdex.vim
 plugin/dbext.vim
-plugin/diffchanges.vim
 plugin/endwise.vim
 plugin/grep.vim
 plugin/matchit.vim
 plugin/sco.vim
 plugin/sco_command_feature.sco
 plugin/sco_keys.vim
-plugin/taglist.vim
-plugin/tail.vim
-plugin/textile.vim
 plugin/vimirc.vim
 spell/**
 syntax/ipmsg.vim
-syntax/textile.vim
 tail_options.vim
