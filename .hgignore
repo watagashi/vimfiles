@@ -48,4 +48,3 @@ plugin/sco_keys.vim
 plugin/vimirc.vim
 spell/**
 syntax/ipmsg.vim
-tail_options.vim
