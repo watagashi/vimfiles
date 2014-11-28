@@ -1,3 +1,4 @@
+scriptencoding cp932
 silent! %s/‡@/(1)/g
 silent! %s/‡A/(2)/g
 silent! %s/‡B/(3)/g
@@ -18,16 +19,16 @@ silent! %s/‡P/(17)/g
 silent! %s/‡Q/(18)/g
 silent! %s/‡R/(19)/g
 silent! %s/‡S/(20)/g
-silent! %s/‡T/I /g
-silent! %s/‡U/II /g
-silent! %s/‡V/III /g
-silent! %s/‡W/IV /g
-silent! %s/‡X/V /g
-silent! %s/‡Y/VI /g
-silent! %s/‡Z/VII /g
-silent! %s/‡[/VIII /g
-silent! %s/‡\/IX /g
-silent! %s/‡]/X /g
+silent! %s/úJ/I /g
+silent! %s/úK/II /g
+silent! %s/úL/III /g
+silent! %s/úM/IV /g
+silent! %s/úN/V /g
+silent! %s/úO/VI /g
+silent! %s/úP/VII /g
+silent! %s/úQ/VIII /g
+silent! %s/úR/IX /g
+silent! %s/úS/X /g
 silent! %s/ú@/i /g
 silent! %s/úA/ii /g
 silent! %s/úB/iii /g
@@ -61,9 +62,9 @@ silent! %s/‡u/m^2/g
 silent! %s/‡r/mg/g
 silent! %s/‡s/kg/g
 silent! %s/‡t/cc/g
-silent! %s/‡‚/No./g
+silent! %s/úY/No./g
 silent! %s/‡ƒ/K.K./g
-silent! %s/‡„/TEL/g
+silent! %s/úZ/TEL/g
 silent! %s/‡€/g/g
 silent! %s/‡/h/g
 silent! %s/‡”/ƒ°/g
@@ -72,7 +73,7 @@ silent! %s/‡†/(’†)/g
 silent! %s/‡‡/(‰º)/g
 silent! %s/‡ˆ/(¶)/g
 silent! %s/‡‰/(‰E)/g
-silent! %s/‡Š/(Š”)/g
+silent! %s/úX/(Š”)/g
 silent! %s/‡‹/(—L)/g
 silent! %s/‡Œ/(‘ã)/g
 silent! %s/‡/–¾¡/g
