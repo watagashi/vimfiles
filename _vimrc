@@ -35,6 +35,7 @@ set printoptions+=formfeed:y
 if (version == 703 && has("patch72")) || version > 703
     set wildignorecase
 endif
+set visualbell
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
