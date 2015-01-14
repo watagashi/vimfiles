@@ -202,4 +202,7 @@ if isdirectory(expand("~/Documents/diary"))
     let g:calendar_diary = "~/Documents/diary"
 endif
 
+" previm
+let g:previm_enable_realtime = 1
+
 colorscheme desert
