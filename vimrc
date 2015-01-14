@@ -202,7 +202,4 @@ if isdirectory(expand("~/Documents/diary"))
     let g:calendar_diary = "~/Documents/diary"
 endif
 
-let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-creole"
-let &runtimepath.= "," . expand("<sfile>:p:h") . "/repos/vim-markdown"
-
 colorscheme desert
