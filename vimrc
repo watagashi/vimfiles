@@ -206,8 +206,12 @@ endif
 let g:previm_enable_realtime = 1
 
 " https://github.com/othree/javascript-libraries-syntax.vim
-autocmd BufReadPre *.js let b:javascript_lib_use_angularjs = 1
-autocmd BufReadPre *.js let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.js     let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.htm    let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.html   let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.js     let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.htm    let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.html   let b:javascript_lib_use_angularui = 1
 
 " Syntastic
 " set statusline+=%#warningmsg#
