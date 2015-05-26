@@ -36,6 +36,7 @@ if (version == 703 && has("patch72")) || version > 703
     set wildignorecase
 endif
 set visualbell
+set updatetime=2000
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
@@ -225,5 +226,12 @@ let g:syntastic_check_on_wq = 0
 
 " set vim-airline
 let g:airline_theme='light'
+
+if has("autocmd") && exists("+omnifunc")
+autocmd Filetype *
+    \	if &omnifunc == "" |
+    \		setlocal omnifunc=syntaxcomplete#Complete |
+    \	endif
+endif
 
 colorscheme desert
