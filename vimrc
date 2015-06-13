@@ -36,6 +36,7 @@ if (version == 703 && has("patch72")) || version > 703
     set wildignorecase
 endif
 set visualbell
+set updatetime=2000
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
@@ -60,6 +61,7 @@ endif
 
 if has("autocmd")
 	autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
+    autocmd BufNewFile,BufRead .jshintrc setf json
 endif
 
 command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& cursorbind< | norm zE
@@ -204,5 +206,32 @@ endif
 
 " previm
 let g:previm_enable_realtime = 1
+
+" https://github.com/othree/javascript-libraries-syntax.vim
+autocmd BufReadPre *.js     let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.htm    let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.html   let b:javascript_lib_use_angularjs = 1
+autocmd BufReadPre *.js     let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.htm    let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.html   let b:javascript_lib_use_angularui = 1
+
+" Syntastic
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" set vim-airline
+let g:airline_theme='light'
+
+if has("autocmd") && exists("+omnifunc")
+autocmd Filetype *
+    \	if &omnifunc == "" |
+    \		setlocal omnifunc=syntaxcomplete#Complete |
+    \	endif
+endif
 
 colorscheme desert
