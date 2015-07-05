@@ -16,6 +16,7 @@ augroup filetypedetect
   au! BufNewFile,BufRead *.ps1		setf ps1
   au! BufNewFile,BufRead *.ddl		setf sql
   au! BufNewFile,BufRead *.tss		setf javascript
+  au! BufNewFile,BufRead *.adoc		setf asciidoc
   silent! execute "so ". expand("<sfile>:p:h") . "/repos/vim-creole/ftdetect/creole.vim"
 augroup END
 " vim:set sw=2:
