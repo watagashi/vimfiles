@@ -214,6 +214,9 @@ autocmd BufReadPre *.html   let b:javascript_lib_use_angularjs = 1
 autocmd BufReadPre *.js     let b:javascript_lib_use_angularui = 1
 autocmd BufReadPre *.htm    let b:javascript_lib_use_angularui = 1
 autocmd BufReadPre *.html   let b:javascript_lib_use_angularui = 1
+autocmd BufReadPre *.js     let b:javascript_lib_use_angularuirouter = 1
+autocmd BufReadPre *.htm    let b:javascript_lib_use_angularuirouter = 1
+autocmd BufReadPre *.html   let b:javascript_lib_use_angularuirouter = 1
 autocmd BufReadPre *.js     let b:javascript_lib_use_jasmine = 1
 autocmd BufReadPre *.js     let b:javascript_lib_use_chai = 1
 
