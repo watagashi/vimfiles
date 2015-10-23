@@ -96,6 +96,8 @@ endif
 
 command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 
+command! -bar -nargs=1 G1log r!git log --oneline --reverse <args>.. | perl -pe 's/^[0-9a-f]+ /* /'
+
 " Vim technique bible 3-14
 nnoremap * *N
 nnoremap # #N
