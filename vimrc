@@ -231,6 +231,9 @@ let g:syntastic_auto_loc_list = 0 " recomemnded 1, default 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ["eslint", "jshint", "jscs"]
+if filereadable("~/dotfiles/.mdlrc")
+    let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
+endif
 
 " set vim-airline
 let g:airline_theme='light'
