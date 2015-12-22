@@ -27,12 +27,12 @@ set guioptions+=a	" Kaoriya 版 Vim 6.1.267 の gvimrc からなくなった
 "vnoremap gX "*c
 
 if has( 'win32' )
-  command! -bar Fonts set guifont=ＭＳ_ゴシック:h9:cSHIFTJIS
-  command! -bar Fontl set guifont=ＭＳ_ゴシック:h12:cSHIFTJIS
+  command! -bar Fonts set guifont=MS_Gothic:h9:cSHIFTJIS
+  command! -bar Fontl set guifont=MS_Gothic:h12:cSHIFTJIS
   "command! -bar Scrl set columns=136 lines=48
   "command! -bar Scrs set columns=80 lines=25
-  "command! -bar ND set columns=80 lines=25 guifont=ＭＳ_ゴシック:h12:cSHIFTJIS
-  "command! -bar HD set guifont=ＭＳ_ゴシック:h9:cSHIFTJIS columns=136 lines=48 
+  "command! -bar ND set columns=80 lines=25 guifont=MS_Gothic:h12:cSHIFTJIS
+  "command! -bar HD set guifont=MS_Gothic:h9:cSHIFTJIS columns=136 lines=48 
 
   " Vim technique bible 1-9 (pp.39)
   let g:IMState = 0
