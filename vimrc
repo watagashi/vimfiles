@@ -208,6 +208,9 @@ endif
 
 " previm
 let g:previm_enable_realtime = 1
+if has('win32')
+  let g:previm_open_cmd = 'start opera'
+endif
 
 " https://github.com/othree/javascript-libraries-syntax.vim
 autocmd BufReadPre *.js     let b:javascript_lib_use_angularjs = 1
