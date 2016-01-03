@@ -61,7 +61,7 @@ endif
 
 if has("autocmd")
 	autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
-    autocmd BufNewFile,BufRead .jshintrc setf json
+    autocmd BufNewFile,BufRead .{jshint,eslint,jscs,jsbeautify}rc setf json
 endif
 
 command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& cursorbind< | norm zE
