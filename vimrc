@@ -251,4 +251,9 @@ endif
 " Gitv
 let g:Gitv_OpenHorizontal='auto'
 
+" EditorConfig
+if has('python')
+    let g:EditorConfig_core_mode='python_external'
+endif
+
 colorscheme desert
