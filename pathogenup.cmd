@@ -1,7 +1,8 @@
-@for /d %%d in (%HOMEDRIVE%%HOMEPATH%\vimfiles\bundle\*) do @(
+@for /d %%d in ("%~dp0bundle\*") do @(
         if exist %%d\.git (
-            cd %%d
+            pushd %%d
             git remote -v
             git pull
+	    popd
             )
         )
