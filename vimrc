@@ -258,4 +258,7 @@ if has('python')
     let g:EditorConfig_core_mode='python_external'
 endif
 
+" Tabular
+command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s\|$\)
+
 colorscheme desert
