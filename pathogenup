@@ -1,4 +1,9 @@
 #!/bin/sh
 
+# Git
 find `dirname $0`/bundle -maxdepth 1 -type d \
 	-exec sh -c 'cd {} ; test -d .git && git remote -v && git pull' \;
+
+# Mercurial
+find `dirname $0`/bundle -maxdepth 1 -type d \
+	-exec sh -c 'cd {} ; test -d .hg && hg path default && hg pull -u' \;
