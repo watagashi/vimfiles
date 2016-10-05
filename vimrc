@@ -232,7 +232,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0 " recomemnded 1, default 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ["jshint", "jscs"]
+let g:syntastic_javascript_checkers = ["eslint"]
 if filereadable("~/dotfiles/.mdlrc")
     let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
 endif
