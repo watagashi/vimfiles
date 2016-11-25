@@ -4,16 +4,14 @@
     rem Git
 
     if exist %%d\.git (
-        echo %%~nxd
         pushd %%d
-        git pull
+        git pull --verbose
         popd
     )
 
     rem Mercurial
 
     if exist %%d\.hg (
-        echo %%~nxd
         hg --cwd %%d pull -u
     )
 )

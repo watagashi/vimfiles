@@ -2,10 +2,10 @@
 
 # Git
 find `dirname $0`/bundle -maxdepth 1 -type d \
-	-exec test -d {}/.git \; -print \
-	-exec git -C {} pull \;
+	-exec test -d {}/.git \; \
+	-exec git -C {} pull --verbose \;
 
 # Mercurial
 find `dirname $0`/bundle -maxdepth 1 -type d \
-	-exec test -d {}/.hg \; -print \
+	-exec test -d {}/.hg \; \
 	-exec hg --cwd {} pull -u \;
