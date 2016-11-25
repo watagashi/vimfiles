@@ -14,8 +14,6 @@
 
     if exist %%d\.hg (
         echo %%~nxd
-        pushd %%d
-        hg pull -u
-        popd
+        hg --cwd %%d pull -u
     )
 )
