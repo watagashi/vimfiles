@@ -3,9 +3,9 @@
 # Git
 find `dirname $0`/bundle -maxdepth 1 -type d \
 	-exec test -d {}/.git \; -print \
-	-exec sh -c 'cd {} ; git pull' \;
+	-exec git -C {} pull \;
 
 # Mercurial
 find `dirname $0`/bundle -maxdepth 1 -type d \
 	-exec test -d {}/.hg \; -print \
-	-exec sh -c 'cd {} ; hg pull -u' \;
+	-exec hg --cwd {} pull -u \;
