@@ -4,8 +4,8 @@
     rem Git
 
     if exist %%d\.git (
+        echo %%~nxd
         pushd %%d
-        git remote -v
         git pull
         popd
     )
@@ -13,8 +13,8 @@
     rem Mercurial
 
     if exist %%d\.hg (
+        echo %%~nxd
         pushd %%d
-        hg path default
         hg pull -u
         popd
     )
