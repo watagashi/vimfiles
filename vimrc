@@ -258,6 +258,9 @@ let g:agit_ignore_spaces=0
 if has('python')
     let g:EditorConfig_core_mode='python_external'
 endif
+if has('win32')
+    let g:EditorConfig_exclude_patterns = ['[^\x01-\x7e]']
+endif
 
 " Tabular
 command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s\|$\)
