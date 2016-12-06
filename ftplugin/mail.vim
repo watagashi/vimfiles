@@ -16,3 +16,6 @@ endif
 
 " Abbreviations
 abbreviate ÇÊÇÎÇµÇ≠Ç® ÇÊÇÎÇµÇ≠Ç®äËÇ¢Ç¢ÇΩÇµÇ‹Ç∑ÅB
+
+" airline
+let b:airline_whitespace_checks = [ 'indent', 'mixed-indent-file' ]
