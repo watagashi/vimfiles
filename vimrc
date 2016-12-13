@@ -37,6 +37,7 @@ if (version == 703 && has("patch72")) || version > 703
 endif
 set visualbell
 set updatetime=2000
+set cryptmethod=blowfish2
 "set cscopetag
 "if &shell =~? "cmd"
 "	set shell=$comspec\ /E:ON\ /F:ON
