@@ -186,6 +186,9 @@ endif
 if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
     let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
 endif
+" if filereadable("//VBOXSVR/twada/.skk-jisyo")
+"    let g:skk_jisyo = "//VBOXSVR/twada/.skk-jisyo"
+"endif
 let g:skk_show_annotation=1
 let g:skk_egg_like_newline=1
 
