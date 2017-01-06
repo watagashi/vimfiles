@@ -269,4 +269,8 @@ endif
 " Tabular
 command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s\|$\)
 
+" junegunn/vim-emoji: Emoji in Vim https://github.com/junegunn/vim-emoji
+set completefunc=emoji#complete
+command! -range Emoji <line1>,<line2>s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
+
 colorscheme desert
