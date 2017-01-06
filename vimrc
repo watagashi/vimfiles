@@ -178,7 +178,7 @@ if has('win32')
     endif
 endif
 if has('win32') && has('python')
-    let twitvim_enable_python = 1
+    let g:twitvim_enable_python = 1
 endif
 
 " skk
