@@ -177,9 +177,6 @@ if has('win32')
         let g:twitvim_browser_cmd = $ProgramFiles . '\Internet Explorer\iexplore.exe'
     endif
 endif
-if has('win32') && has('python')
-    let g:twitvim_enable_python = 1
-endif
 
 " skk
 " http://www.vim.org/scripts/script.php?script_id=3118
