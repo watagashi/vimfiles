@@ -5,8 +5,6 @@ scriptencoding utf-8
 colorscheme desert
 if has( 'gui_gtk2' )
   set guifont=Monospace\ 12
-elseif has( 'macunix' )
-  set guifont=Osaka-Mono:h18
 endif
 "set guifont=Terminal:h14:cSHIFTJIS
 
