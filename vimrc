@@ -270,4 +270,7 @@ command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s
 set completefunc=emoji#complete
 command! -range Emoji <line1>,<line2>s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
 
+" NeoComplete
+let g:neocomplete#enable_at_startup = 1
+
 colorscheme desert
