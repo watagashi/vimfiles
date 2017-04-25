@@ -206,10 +206,12 @@ set formatexpr=autofmt#compat#formatexpr()
 
 " calendar.vim
 " http://www.vim.org/scripts/script.php?script_id=52
-if isdirectory(expand("~/Dropbox/Dillinger/diary"))
-    let g:calendar_diary = "~/Dropbox/Dillinger/diary"
-elseif isdirectory(expand("~/Documents/diary"))
-    let g:calendar_diary = "~/Documents/diary"
+if !exists("g:calendar_diary")
+    if isdirectory(expand("~/Dropbox/Dillinger/diary"))
+        let g:calendar_diary = "~/Dropbox/Dillinger/diary"
+    elseif isdirectory(expand("~/Documents/diary"))
+        let g:calendar_diary = "~/Documents/diary"
+    endif
 endif
 
 " previm
