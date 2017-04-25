@@ -1,5 +1,16 @@
-#!/bin/sh
+#!/bin/zsh
+
+BG='&'
+
+while getopts s OPT
+do
+	case $OPT in
+		s)	BG=''
+			;;
+	esac
+done
+shift $((OPTIND - 1))
 
 find `dirname $0`/bundle -maxdepth 1 -type d \
-	-exec sh -c '(test -d {}/.git && (git -C {} pull --verbose &)) || (test -d {}/.hg && (hg --cwd {} pull -u &)) && sleep 0.1' \;
+	-exec sh -c '(test -d {}/.git && (git -C {} pull --verbose '${BG}')) || (test -d {}/.hg && (hg --cwd {} pull -u &)) && sleep 0.1' \;
 sleep 5
