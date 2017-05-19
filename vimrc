@@ -261,9 +261,6 @@ let g:Gitv_OpenHorizontal='auto'
 let g:agit_ignore_spaces=0
 
 " EditorConfig
-if has('python')
-    let g:EditorConfig_core_mode='python_external'
-endif
 if has('win32')
     let g:EditorConfig_exclude_patterns = ['[^\x01-\x7e]']
 endif
