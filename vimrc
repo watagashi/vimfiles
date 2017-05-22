@@ -59,6 +59,15 @@ if &term =~ "xterm" && &t_Co<2
     syntax on
     set hlsearch
 endif
+"
+
+" Countermeasure of failure when deciphering file
+if has('win32')
+    " TODO
+    " set fencodings....
+else
+    set fencodings-=latin1
+endif
 
 if has("autocmd")
 	autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
