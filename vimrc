@@ -64,9 +64,9 @@ endif
 " Countermeasure of failure when deciphering file
 if has('win32')
     " TODO
-    " set fencodings....
+    " set fileencodings....
 else
-    set fencodings-=latin1
+    set fileencodings-=latin1
 endif
 
 if has("autocmd")
