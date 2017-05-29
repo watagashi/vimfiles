@@ -7,6 +7,7 @@ endif
 if filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
     source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
     execute pathogen#infect()
+    set sessionoptions-=options
 endif
 if $TERM == 'cygwin'
     set term=builtin_pcansi
