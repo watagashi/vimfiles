@@ -4,7 +4,8 @@ scriptencoding utf-8
 if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
-if filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
+
+if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     source ~/vimfiles/plugged/vim-plug/plug.vim
 endif
 
@@ -268,10 +269,10 @@ set formatexpr=autofmt#compat#formatexpr()
 " calendar.vim
 " http://www.vim.org/scripts/script.php?script_id=52
 if !exists("g:calendar_diary")
-    if isdirectory(expand("~/Dropbox/Dillinger/diary"))
-        let g:calendar_diary = "~/Dropbox/Dillinger/diary"
-    elseif isdirectory(expand("~/Documents/diary"))
+    if isdirectory(expand("~/Documents/diary"))
         let g:calendar_diary = "~/Documents/diary"
+    elseif isdirectory(expand("~/Dropbox/Dillinger/diary"))
+        let g:calendar_diary = "~/Dropbox/Dillinger/diary"
     endif
 endif
 
