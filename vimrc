@@ -5,10 +5,14 @@ if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
 if filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
-    source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim
-    execute pathogen#infect()
-    set sessionoptions-=options
+    source ~/vimfiles/plugged/vim-plug/plug.vim
 endif
+
+let g:plug_threads = 8
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/vim-plug'
+call plug#end()
+
 if $TERM == 'cygwin'
     set term=builtin_pcansi
     set encoding=cp932

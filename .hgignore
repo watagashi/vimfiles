@@ -6,6 +6,7 @@ syntax: glob
 
 repos/**
 bundle/**
+plugged/**
 **.DS_Store
 **.un~
 **.sw?
