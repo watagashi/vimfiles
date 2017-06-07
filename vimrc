@@ -59,6 +59,10 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     Plug 'vim-scripts/vcscommand.vim'
     Plug 'wavded/vim-stylus'
     call plug#end()
+elseif filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
+    source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim"
+    execute pathogen#infect()
+    set sessionoptions-=options
 endif
 
 if $TERM == 'cygwin'
