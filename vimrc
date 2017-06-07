@@ -336,4 +336,12 @@ command! -range Emoji <line1>,<line2>s/:\([^:]\+\):/\=emoji#for(submatch(1), sub
 " NeoComplete
 let g:neocomplete#enable_at_startup = 1
 
+" NeoFormat
+let g:neoformat_enabled_javascript = ['prettier', 'js-beautify']
+let g:neoformat_javascript_prettier = {
+    \       'exe': 'prettier',
+    \       'args': ['--single-quote', '--stdin'],
+    \       'stdin': 1
+    \   }
+
 colorscheme desert
