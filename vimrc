@@ -9,7 +9,7 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     source ~/vimfiles/plugged/vim-plug/plug.vim
     let g:plug_threads = 8
 
-    call plug#begin('~/.vim/plugged')
+    call plug#begin('~/vimfiles/plugged')
     Plug 'Chiel92/vim-autoformat'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'JarrodCTaylor/vim-js2coffee'
