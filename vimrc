@@ -6,13 +6,14 @@ if $HOME=='' && has('win32')
 endif
 
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
-if empty(glob('~/vimfiles/autoload/plug.vim'))
-    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+let s:plugvim = expand("~/vimfiles/autoload/plug.vim")
+if empty(glob(s:plugvim))
+    execute "silent !curl -fLo " .  s:plugvim . " --create-dirs "
+                \ . "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-if !empty(glob('~/vimfiles/autoload/plug.vim'))
+if !empty(glob(s:plugvim))
     let g:plug_threads = 8
 
     call plug#begin('~/vimfiles/plugged')
