@@ -1,9 +1,11 @@
 syntax: glob
 
+**~
 **.orig
 **.zip
 **.vba
 
+autoload/plug.vim
 repos/**
 bundle/**
 plugged/**
@@ -15,37 +17,6 @@ plugged/**
 .netrwhist
 
 GetLatest/GetLatestVimScripts.dat
-autoload/Align.vim
-autoload/AlignMaps.vim
-autoload/SQLUtilities.vim
-autoload/dbext.vim
-autoload/dbext_dbi.vim
-doc/Align.txt
-doc/SQLUtilities.txt
-doc/dbext.txt
-doc/dbext_gpl.dat
-doc/headline.txt
-doc/matchit.txt
 dict/SKK-JISYO.L
 doc/tags
 doc/tags-*
-ftplugin/conf.vim
-ftplugin/ipmsg.vim
-ftplugin/log.vim
-macros/vim-tail.zsh
-macros/vime2.vim
-plugin/AlignMapsPlugin.vim
-plugin/AlignPlugin.vim
-plugin/SQLUtilities.vim
-plugin/cecutil.vim
-plugin/cmdex.vim
-plugin/dbext.vim
-plugin/endwise.vim
-plugin/grep.vim
-plugin/matchit.vim
-plugin/sco.vim
-plugin/sco_command_feature.sco
-plugin/sco_keys.vim
-plugin/vimirc.vim
-spell/**
-syntax/ipmsg.vim
