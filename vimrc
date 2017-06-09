@@ -5,8 +5,14 @@ if $HOME=='' && has('win32')
   let $HOME=$USERPROFILE
 endif
 
-if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
-    source ~/vimfiles/plugged/vim-plug/plug.vim
+" https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
+if empty(glob('~/vimfiles/autoload/plug.vim'))
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+if !empty(glob('~/vimfiles/autoload/plug.vim'))
     let g:plug_threads = 8
 
     call plug#begin('~/vimfiles/plugged')
@@ -33,7 +39,6 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     Plug 'jelera/vim-javascript-syntax'
     Plug 'jmcantrell/vim-diffchanges'
     Plug 'junegunn/vim-emoji'
-    Plug 'junegunn/vim-plug'
     Plug 'kannokanno/previm'
     Plug 'kchmck/vim-coffee-script'
     Plug 'ludovicchabant/vim-lawrencium'
