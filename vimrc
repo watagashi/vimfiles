@@ -10,6 +10,7 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     let g:plug_threads = 8
 
     call plug#begin('~/vimfiles/plugged')
+
     Plug 'Chiel92/vim-autoformat'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'JarrodCTaylor/vim-js2coffee'
@@ -49,7 +50,6 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-fugitive'
     Plug 'tyru/open-browser.vim'
-    Plug 'tyru/skk.vim/'
     Plug 'tyru/skkdict.vim/'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'vim-scripts/SyntaxComplete'
@@ -58,6 +58,18 @@ if filereadable( expand( "~/vimfiles/plugged/vim-plug/plug.vim" ) )
     Plug 'vim-scripts/taglist.vim'
     Plug 'vim-scripts/vcscommand.vim'
     Plug 'wavded/vim-stylus'
+
+    " skk
+    " if filereadable("//VBOXSVR/twada/.skk-jisyo")
+    "    let g:skk_jisyo = "//VBOXSVR/twada/.skk-jisyo"
+    " else
+    if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
+        Plug 'tyru/skk.vim/'
+        let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
+    endif
+    let g:skk_show_annotation=1
+    let g:skk_egg_like_newline=1
+
     call plug#end()
 elseif filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
     source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim"
@@ -245,17 +257,6 @@ if has('win32')
         let g:twitvim_browser_cmd = $ProgramFiles . '\Internet Explorer\iexplore.exe'
     endif
 endif
-
-" skk
-" http://www.vim.org/scripts/script.php?script_id=3118
-if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
-    let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
-endif
-" if filereadable("//VBOXSVR/twada/.skk-jisyo")
-"    let g:skk_jisyo = "//VBOXSVR/twada/.skk-jisyo"
-"endif
-let g:skk_show_annotation=1
-let g:skk_egg_like_newline=1
 
 " diffchanges.vim
 " http://www.vim.org/scripts/script.php?script_id=2158
