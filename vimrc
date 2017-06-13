@@ -1,6 +1,8 @@
 scriptencoding utf-8
 
 " vim: set ts=4 sw=4 et ff=unix fenc=utf-8:
+
+let s:vimfiles = expand('<sfile>:p:h')
 if has('win32')
     if $HOME=='' && has('win32')
         let $HOME=$USERPROFILE
@@ -9,9 +11,9 @@ if has('win32')
 endif
 
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
-let s:plugvim = expand("~/vimfiles/autoload/plug.vim")
+let s:plugvim = s:vimfiles . '/autoload/plug.vim'
 if empty(glob(s:plugvim))
-    execute "silent !curl -fLo " .  s:plugvim . " --create-dirs "
+    execute "silent !curl -fLo " . s:plugvim . " --create-dirs "
                 \ . "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -19,7 +21,7 @@ endif
 if !empty(glob(s:plugvim))
     let g:plug_threads = 8
 
-    call plug#begin('~/vimfiles/plugged')
+    call plug#begin(s:vimfiles . '/plugged')
 
     Plug 'Chiel92/vim-autoformat'
     Plug 'HerringtonDarkholme/yats.vim'
@@ -72,16 +74,16 @@ if !empty(glob(s:plugvim))
     " if filereadable("//VBOXSVR/twada/.skk-jisyo")
     "    let g:skk_jisyo = "//VBOXSVR/twada/.skk-jisyo"
     " else
-    if filereadable( expand( "~/vimfiles/dict/SKK-JISYO.L" ) )
+    if filereadable(s:vimfiles . '/dict/SKK-JISYO.L')
         Plug 'tyru/skk.vim/'
-        let g:skk_large_jisyo = "~/vimfiles/dict/SKK-JISYO.L"
+        let g:skk_large_jisyo = s:vimfiles . '/dict/SKK-JISYO.L'
     endif
     let g:skk_show_annotation=1
     let g:skk_egg_like_newline=1
 
     call plug#end()
-elseif filereadable( expand( "~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim" ) )
-    source ~/vimfiles/bundle/vim-pathogen/autoload/pathogen.vim"
+if filereadable(s:vimfiles . '/bundle/vim-pathogen/autoload/pathogen.vim')
+    execute 'source ' . s:vimfiles . '/bundle/vim-pathogen/autoload/pathogen.vim'
     execute pathogen#infect()
     set sessionoptions-=options
 endif
@@ -155,7 +157,7 @@ endif
 command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& cursorbind< | norm zE
 command! -bar -nargs=0 PrintFileInfo echo strftime( '%c' ,getftime( expand( '%' ) ) ) . " " . getfsize( expand( '%' ) ) . " Bytes"
 command! -bar -nargs=0 Izon runtime macros/izon.vim
-command! -bar -nargs=0 Vime execute 'source ~/vimfiles/macros/vime2.vim'
+command! -bar -nargs=0 Vime execute 'source ' . s:vimfiles . '/macros/vime2.vim'
 command! -bar -nargs=0 Rlog new | setlocal bt=nofile noswf ft=rcslog | execute '0r! rlog #' | 1
 command! -bar -nargs=? -range=% Extab let et_save=&et | setl et | <line1>,<line2>ret! <args> | let &et=et_save | unlet et_save
 
