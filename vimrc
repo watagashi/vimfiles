@@ -150,7 +150,7 @@ else
 endif
 
 if has("autocmd")
-	autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
+    autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead .{jshint,eslint,jscs,jsbeautify}rc setf json
 endif
 
@@ -262,7 +262,7 @@ let g:user_zen_settings = {'lang':'ja'}
 " http://www.vim.org/scripts/script.php?script_id=2204
 let g:twitvim_count = 100
 if exists('$HTTP_PROXY')
-    let s:proxy_url_pattern = 
+    let s:proxy_url_pattern =
                 \ '^\%(\([^:]*\):\/\/\)\='
                 \ . '\%(\([^:@]*\)\%(:\([^@]*\)\)\=@\)\='
                 \ . '\([^:]*\)\%(:\(\d*\)\)\=/\=$'
