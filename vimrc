@@ -82,7 +82,7 @@ if !empty(glob(s:plugvim))
     let g:skk_egg_like_newline=1
 
     call plug#end()
-if filereadable(s:vimfiles . '/bundle/vim-pathogen/autoload/pathogen.vim')
+elseif filereadable(s:vimfiles . '/bundle/vim-pathogen/autoload/pathogen.vim')
     execute 'source ' . s:vimfiles . '/bundle/vim-pathogen/autoload/pathogen.vim'
     execute pathogen#infect()
     set sessionoptions-=options
