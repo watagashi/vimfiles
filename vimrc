@@ -1,8 +1,11 @@
 scriptencoding utf-8
 
 " vim: set ts=4 sw=4 et ff=unix fenc=utf-8:
-if $HOME=='' && has('win32')
-  let $HOME=$USERPROFILE
+if has('win32')
+    if $HOME=='' && has('win32')
+        let $HOME=$USERPROFILE
+    endif
+    let s:pg = $ProgramFiles
 endif
 
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
@@ -178,7 +181,7 @@ if has('win32')
     if exists('$JAVA_HOME')
         execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $JAVA_HOME . '\bin\native2ascii.exe" <args>'
     else
-        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $ProgramFiles . '\java\jdk1.6.0_24\bin\native2ascii.exe" <args>'
+        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . s:pg . '\java\jdk1.6.0_24\bin\native2ascii.exe" <args>'
     endif
 endif
 
@@ -229,13 +232,15 @@ if v:version < 700
 endif
 let g:CVSCommandDiffOpt='bBu'
 let g:VCSCommandCVSDiffOpt='bBu'
-" msysGit
-if executable($ProgramFiles . '\Git\bin\git.exe')
-    let g:VCSCommandGitExec= $ProgramFiles . '\Git\bin\git.exe'
-endif
-" TortoiseHg for Windows
-if executable($ProgramFiles . '\TortoiseHg\hg.exe') && executable($ProgramFiles . '\TortoiseHg\bin\hg.cmd')
-    let g:VCSCommandHGExec= $ProgramFiles . '\TortoiseHg\hg.exe'
+if has('win32')
+    " msysGit
+    if executable(s:pg . '\Git\bin\git.exe')
+        let g:VCSCommandGitExec= s:pg . '\Git\bin\git.exe'
+    endif
+    " TortoiseHg for Windows
+    if executable(s:pg . '\TortoiseHg\hg.exe')
+        let g:VCSCommandHGExec= s:pg . '\TortoiseHg\hg.exe'
+    endif
 endif
 let $HGENCODING=&encoding
 command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
@@ -269,15 +274,15 @@ if exists('$HTTP_PROXY')
                 \ . ((s:proxy_pass == '') ? '' : ':' . s:proxy_pass)
 endif
 if has('win32')
-    let g:twitvim_browser_cmd = $ProgramFiles
-    if executable($ProgramFiles . '\Vivaldi\Application\vivaldi.exe')
-        let g:twitvim_browser_cmd .= '\Vivaldi\Application\vivaldi.exe'
-    elseif executable($ProgramFiles . '\Opera\opera.exe')
-        let g:twitvim_browser_cmd .= '\Opera\opera.exe'
-    elseif executable($ProgramFiles . '\Mozilla Firefox\firefox.exe')
-        let g:twitvim_browser_cmd .= '\Mozilla Firefox\firefox.exe'
-    else
-        let g:twitvim_browser_cmd .= '\Internet Explorer\iexplore.exe'
+    let g:twitvim_browser_cmd = s:pg . '\Vivaldi\Application\vivaldi.exe'
+    if !executable(g:twitvim_browser_cmd)
+        let g:twitvim_browser_cmd = s:pg . '\Opera\opera.exe'
+    endif
+    if !executable(g:twitvim_browser_cmd)
+        let g:twitvim_browser_cmd = s:pg . '\Mozilla Firefox\firefox.exe'
+    endif
+    if !executable(g:twitvim_browser_cmd)
+        let g:twitvim_browser_cmd = s:pg . '\Internet Explorer\iexplore.exe'
     endif
 elseif has('macunix')
     let twitvim_browser_cmd = 'open'
