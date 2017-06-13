@@ -254,6 +254,20 @@ let g:user_zen_settings = {'lang':'ja'}
 " TwitVim
 " http://www.vim.org/scripts/script.php?script_id=2204
 let g:twitvim_count = 100
+if exists('$HTTP_PROXY')
+    let s:proxy_url_pattern = 
+                \ '^\%(\([^:]*\):\/\/\)\='
+                \ . '\%(\([^:@]*\)\%(:\([^@]*\)\)\=@\)\='
+                \ . '\([^:]*\)\%(:\(\d*\)\)\=/\=$'
+    let g:twitvim_proxy = substitute($HTTP_PROXY,
+                \ s:proxy_url_pattern, '\4:\5', '')
+    let s:proxy_login = substitute($HTTP_PROXY,
+                \ s:proxy_url_pattern, '\2', '')
+    let s:proxy_pass = substitute($HTTP_PROXY,
+                \ s:proxy_url_pattern, '\3', '')
+    let g:twitvim_proxy_login = s:proxy_login
+                \ . ((s:proxy_pass == '') ? '' : ':' . s:proxy_pass)
+endif
 if has('win32')
     if executable($ProgramFiles . '\Opera\opera.exe')
         let g:twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
@@ -262,6 +276,8 @@ if has('win32')
     else
         let g:twitvim_browser_cmd = $ProgramFiles . '\Internet Explorer\iexplore.exe'
     endif
+elseif has('macunix')
+    let twitvim_browser_cmd = 'open'
 endif
 
 " diffchanges.vim
