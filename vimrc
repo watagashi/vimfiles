@@ -269,12 +269,15 @@ if exists('$HTTP_PROXY')
                 \ . ((s:proxy_pass == '') ? '' : ':' . s:proxy_pass)
 endif
 if has('win32')
-    if executable($ProgramFiles . '\Opera\opera.exe')
-        let g:twitvim_browser_cmd = $ProgramFiles . '\Opera\opera.exe'
+    let g:twitvim_browser_cmd = $ProgramFiles
+    if executable($ProgramFiles . '\Vivaldi\Application\vivaldi.exe')
+        let g:twitvim_browser_cmd .= '\Vivaldi\Application\vivaldi.exe'
+    elseif executable($ProgramFiles . '\Opera\opera.exe')
+        let g:twitvim_browser_cmd .= '\Opera\opera.exe'
     elseif executable($ProgramFiles . '\Mozilla Firefox\firefox.exe')
-        let g:twitvim_browser_cmd = $ProgramFiles . '\Mozilla Firefox\firefox.exe'
+        let g:twitvim_browser_cmd .= '\Mozilla Firefox\firefox.exe'
     else
-        let g:twitvim_browser_cmd = $ProgramFiles . '\Internet Explorer\iexplore.exe'
+        let g:twitvim_browser_cmd .= '\Internet Explorer\iexplore.exe'
     endif
 elseif has('macunix')
     let twitvim_browser_cmd = 'open'
