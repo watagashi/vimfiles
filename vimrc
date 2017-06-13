@@ -265,7 +265,7 @@ let g:twitvim_count = 100
 if exists('$HTTP_PROXY')
     let s:proxy_url_pattern =
                 \ '^\%(\([^:]*\):\/\/\)\='
-                \ . '\%(\([^:@]*\)\%(:\([^@]*\)\)\=@\)\='
+                \ . '\%(\([^:@]*\)\(:[^@]*\)\=@\)\='
                 \ . '\([^:]*\)\%(:\(\d*\)\)\=/\=$'
     let g:twitvim_proxy = substitute($HTTP_PROXY,
                 \ s:proxy_url_pattern, '\4:\5', '')
@@ -273,8 +273,7 @@ if exists('$HTTP_PROXY')
                 \ s:proxy_url_pattern, '\2', '')
     let s:proxy_pass = substitute($HTTP_PROXY,
                 \ s:proxy_url_pattern, '\3', '')
-    let g:twitvim_proxy_login = s:proxy_login
-                \ . ((s:proxy_pass == '') ? '' : ':' . s:proxy_pass)
+    let g:twitvim_proxy_login = s:proxy_login . s:proxy_pass
 endif
 if has('win32')
     let g:twitvim_browser_cmd = s:pg . '\Vivaldi\Application\vivaldi.exe'
