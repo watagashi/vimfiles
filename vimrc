@@ -2,7 +2,8 @@ scriptencoding utf-8
 
 " vim: set ts=4 sw=4 et ff=unix fenc=utf-8:
 
-let s:vimfiles = expand('<sfile>:p:h')
+let s:vimfiles = isdirectory(expand('~/vimfiles'))
+            \ ? expand('~/vimfiles') : expand('~/.vim')
 if has('win32')
     if $HOME=='' && has('win32')
         let $HOME=$USERPROFILE
