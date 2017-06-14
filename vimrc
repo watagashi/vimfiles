@@ -273,7 +273,8 @@ if exists('$HTTP_PROXY')
                 \ s:proxy_url_pattern, '\2', '')
     let s:proxy_pass = substitute($HTTP_PROXY,
                 \ s:proxy_url_pattern, '\3', '')
-    let g:twitvim_proxy_login = s:proxy_login . s:proxy_pass
+    let g:twitvim_proxy_login = substitute(s:proxy_login . s:proxy_pass,
+                \ '%40', '@', 'g')
 endif
 if has('win32')
     let g:twitvim_browser_cmd = s:pg . '\Vivaldi\Application\vivaldi.exe'
