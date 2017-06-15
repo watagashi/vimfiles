@@ -77,7 +77,9 @@ if !empty(glob(s:plugvim))
     " else
     if filereadable(s:vimfiles . '/dict/SKK-JISYO.L')
         Plug 'tyru/skk.vim/'
-        let g:skk_large_jisyo = s:vimfiles . '/dict/SKK-JISYO.L'
+        if !exists('g:skk_large_jisyo')
+            let g:skk_large_jisyo = s:vimfiles . '/dict/SKK-JISYO.L'
+        endif
     endif
     let g:skk_show_annotation=1
     let g:skk_egg_like_newline=1
