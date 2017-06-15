@@ -1,0 +1,2 @@
+#!/bin/zsh
+curl -Lo $(dirname $0)/SKK-JISYO.L http://openlab.ring.gr.jp/skk/skk/dic/SKK-JISYO.L
