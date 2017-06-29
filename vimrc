@@ -55,6 +55,7 @@ if !empty(glob(s:plugvim))
     Plug 'othree/javascript-libraries-syntax.vim'
     Plug 'plasticboy/vim-markdown'
     Plug 'sbdchd/neoformat'
+    Plug 'tpope/vim-rhubarb'
     Plug 'ternjs/tern_for_vim'
     Plug 'timcharper/textile.vim'
     Plug 'tpope/vim-abolish'
