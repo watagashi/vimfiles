@@ -56,7 +56,7 @@ if !empty(glob(s:plugvim))
     Plug 'plasticboy/vim-markdown'
     Plug 'sbdchd/neoformat'
     Plug 'tpope/vim-rhubarb'
-    Plug 'ternjs/tern_for_vim'
+    Plug 'ternjs/tern_for_vim', { 'do': 'yarn --no-progress \|\| npm i' }
     Plug 'timcharper/textile.vim'
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-fugitive'
