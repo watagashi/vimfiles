@@ -268,11 +268,13 @@ let g:user_zen_settings = {'lang':'ja'}
 " TwitVim
 " http://www.vim.org/scripts/script.php?script_id=2204
 let g:twitvim_count = 100
-" if has('win32')
+if has('win32')
 "     let g:twitvim_enable_python = !empty(globpath(substitute($PATH, '\\\=;', ',', 'g'), 'python.exe', 0, 1))
 " elseif has('unix')
 "     let g:twitvim_enable_python = !empty(globpath(substitute($PATH, ':', ',', 'g'), 'python', 0, 1))
-" endif
+elseif has('macunix')
+    let g:twitvim_enable_python = 1
+endif
 if exists('$HTTP_PROXY')
     let s:proxy_url_pattern =
                 \ '^\%(\([^:]*\):\/\/\)\='
