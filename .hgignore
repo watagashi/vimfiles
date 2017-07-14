@@ -5,7 +5,7 @@ syntax: glob
 **.zip
 **.vba
 
-autoload/plug.vim
+autoload/plug.vim**
 repos/**
 bundle/**
 plugged/**
