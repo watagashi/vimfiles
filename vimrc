@@ -164,6 +164,7 @@ endif
 command! -bar -nargs=0 Nodiff setlocal diff< scrollbind< wrap< foldmethod< foldcolumn& cursorbind< | norm zE
 command! -bar -nargs=0 PrintFileInfo echo strftime( '%c' ,getftime( expand( '%' ) ) ) . " " . getfsize( expand( '%' ) ) . " Bytes"
 command! -bar -nargs=0 Izon runtime macros/izon.vim
+command! -bar -nargs=0 Dakuten runtime macros/kanasoundmark.vim
 command! -bar -nargs=0 Vime execute 'source ' . s:vimfiles . '/macros/vime2.vim'
 command! -bar -nargs=0 Rlog new | setlocal bt=nofile noswf ft=rcslog | execute '0r! rlog #' | 1
 command! -bar -nargs=? -range=% Extab let et_save=&et | setl et | <line1>,<line2>ret! <args> | let &et=et_save | unlet et_save
