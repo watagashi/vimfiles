@@ -199,6 +199,9 @@ command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 
 command! -bar -nargs=1 G1log r!git log --oneline --reverse <args>.. | perl -pe 's/^[0-9a-f]+ /* /'
 
+" URL optimizer for Amazon.co.jp
+command! -range Samz <line1>,<line2>s/\(https\=:\/\/www\.amazon\.co\.jp\)\%(\/.*\)\=\(\/dp\/\w\+\)\%(\/\S\+\)\=/\1\2
+
 " Vim technique bible 3-14
 nnoremap * *N
 nnoremap # #N
@@ -372,7 +375,7 @@ endif
 let g:Gitv_OpenHorizontal='auto'
 
 " agit
-let g:agit_ignore_spaces=0
+" let g:agit_ignore_spaces=0
 
 " EditorConfig
 if has('win32')
@@ -387,7 +390,7 @@ set completefunc=emoji#complete
 command! -range Emoji <line1>,<line2>s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
 
 " NeoComplete
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
 " NeoFormat
 let g:neoformat_enabled_javascript = ['prettier', 'js-beautify']
