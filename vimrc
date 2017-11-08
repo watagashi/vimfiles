@@ -200,7 +200,7 @@ command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 command! -bar -nargs=1 G1log r!git log --oneline --reverse <args>.. | perl -pe 's/^[0-9a-f]+ /* /'
 
 " URL optimizer for Amazon.co.jp
-command! -range Samz <line1>,<line2>s/\(https\=:\/\/www\.amazon\.co\.jp\)\%(\/.*\)\=\(\/dp\/\w\+\)\%(\/\S\+\)\=/\1\2
+command! -range Samz <line1>,<line2>s/\(https\=:\/\/www\.amazon\.co\.jp\)\%(\/.*\)\=\(\/dp\/\w\+\)\%(\/\S\+\)\=\%(?\S\+\)\=/\1\2
 
 " Vim technique bible 3-14
 nnoremap * *N
@@ -307,6 +307,11 @@ if has('win32')
 elseif has('macunix')
     let twitvim_browser_cmd = 'open'
 endif
+
+" open-browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 " diffchanges.vim
 " http://www.vim.org/scripts/script.php?script_id=2158
