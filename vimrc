@@ -308,6 +308,11 @@ elseif has('macunix')
     let twitvim_browser_cmd = 'open'
 endif
 
+" open-browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
+
 " diffchanges.vim
 " http://www.vim.org/scripts/script.php?script_id=2158
 let g:diffchanges_patch_cmd = 'diff -ubB'
