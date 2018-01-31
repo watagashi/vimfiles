@@ -406,5 +406,17 @@ let g:neoformat_javascript_prettier = {
     \       'args': ['--single-quote', '--stdin'],
     \       'stdin': 1
     \   }
+let g:neoformat_enabled_json = ['prettier']
+let g:neoformat_json_prettier = {
+    \       'exe': 'prettier',
+    \       'args': ['--stdin-filepath in.json'],
+    \       'stdin': 1
+    \   }
+let g:neoformat_enabled_markdown = ['prettier']
+let g:neoformat_markdown_prettier = {
+    \       'exe': 'prettier',
+    \       'args': ['--tab-width 4', '--stdin-filepath in.md'],
+    \       'stdin': 1
+    \   }
 
 colorscheme desert
