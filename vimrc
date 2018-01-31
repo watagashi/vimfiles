@@ -202,6 +202,8 @@ command! -bar -nargs=1 G1log r!git log --oneline --reverse <args>.. | perl -pe '
 " URL optimizer for Amazon.co.jp
 command! -range Samz <line1>,<line2>s/\(https\=:\/\/www\.amazon\.co\.jp\)\%(\/.*\)\=\(\/dp\/\w\+\)\%(\/\S\+\)\=\%(?\S\+\)\=/\1\2
 
+command! -nargs=? SudoW w !sudo tee % > /dev/null
+
 " Vim technique bible 3-14
 nnoremap * *N
 nnoremap # #N
