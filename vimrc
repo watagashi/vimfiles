@@ -394,7 +394,7 @@ command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s
 
 " junegunn/vim-emoji: Emoji in Vim https://github.com/junegunn/vim-emoji
 set completefunc=emoji#complete
-command! -range Emoji <line1>,<line2>s/:\(\i\+\):/\=emoji#for(submatch(1), submatch(0))/g
+command! -range Emoji <line1>,<line2>s/:\([0-9A-Za-z_+-]\+\):/\=emoji#for(submatch(1), submatch(0))/g
 
 " NeoComplete
 "let g:neocomplete#enable_at_startup = 1
