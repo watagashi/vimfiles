@@ -68,6 +68,7 @@ if !empty(glob(s:plugvim))
     Plug 'vim-scripts/Tail-Bundle'
     Plug 'vim-syntastic/syntastic'
     Plug 'twitvim/twitvim'
+    Plug 'vim-scripts/loremipsum'
     Plug 'vim-scripts/taglist.vim'
     Plug 'vim-scripts/vcscommand.vim'
     Plug 'wavded/vim-stylus'
