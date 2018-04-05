@@ -179,7 +179,7 @@ command! -bar -nargs=0 Dquote .,/^-- $/-2del | nohl
 command! -bar -nargs=0 -range Htmlencode silent! <line1>,<line2>s/&/\&amp;/g | <line1>,<line2>s/</\&lt;/g | silent! <line1>,<line2>s/>/\&gt;/g | silent! <line1>,<line2>s/"/\&quot;/g | nohl | norm ``
 
 " Quoting reply on Outlook 2016 for Mac
-command! -bar -nargs=0 Aquote 1,5s/^ \n-- $/\r-- / | /^[^>].*> を書き込みました:/+2,$Quote | execute "normal 3\<c-o>"
+command! -bar -nargs=0 Aquote silent! 1,5s/^ \n-- $/\r-- / | /^[^>].*> を書き込みました:/+2,$Quote | execute "normal 3\<c-o>"
 
 command! -bar -nargs=1 Settabs setl ts=<args> sw=<args> et
 
