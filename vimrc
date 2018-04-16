@@ -101,7 +101,6 @@ if $TERM == 'cygwin'
     set encoding=cp932
 endif
 
-" vim: set ts=4 sw=4 et:
 if exists("$TEMP")
     set directory=$TEMP
     set undodir=$TEMP

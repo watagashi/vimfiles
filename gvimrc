@@ -8,7 +8,6 @@ if has( 'gui_gtk2' )
 endif
 "set guifont=Terminal:h14:cSHIFTJIS
 
-" vim:set ts=8 sts=2 sw=2 tw=0:
 "highlight Normal guifg=White guibg=grey10
 "highlight Visual guifg=DarkGray
 "set background=dark
