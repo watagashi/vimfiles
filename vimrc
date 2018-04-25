@@ -209,8 +209,8 @@ nnoremap * *N
 nnoremap # #N
 " Vim technique bible 4-1
 command! OpenTempFile :edit `=tempname()`
-cnoremap <expr> <C-X>dt strftime('%Y%m%d')
-cnoremap <expr> <C-X>ts strftime('%Y%m%d%H%M')
+cnoremap <expr> <C-T>d strftime('%Y%m%d')
+cnoremap <expr> <C-T>t strftime('%Y%m%d%H%M')
 " Vim technique bible 4-16
 nnoremap <ESC><ESC> :nohlsearch<CR>
 " Vim technique bible 5-10
@@ -228,7 +228,8 @@ vnoremap > >gv
 "nnoremap 1gd 1gdzz
 "nnoremap 1gD 1gDzz
 
-inoremap <F2> =strftime("%c")
+inoremap <F2> <C-R>=strftime("%c")<CR>
+inoremap <S-F2> <C-R>=strftime('%Y%m%d%H%M')<CR>
 nnoremap QQ gqgq
 let g:format_join_spaces=1
 
