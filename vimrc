@@ -158,7 +158,7 @@ endif
 
 if has("autocmd")
     autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
-    autocmd BufNewFile,BufRead .{jshint,eslint,jscs,jsbeautify}rc setf json
+    autocmd BufNewFile,BufRead .{textlint,jshint,eslint,jscs,jsbeautify}rc setf json
 endif
 " Remove '*.ja' from defaulut
 let g:zipPlugin_ext='*.apk,*.celzip,*.crtx,*.docm,*.docx,*.dotm,*.dotx,*.ear,*.epub,*.gcsx,*.glox,*.gqsx,*.jar,*.kmz,*.oxt,*.potm,*.potx,*.ppam,*.ppsm,*.ppsx,*.pptm,*.pptx,*.sldx,*.thmx,*.vdw,*.war,*.wsz,*.xap,*.xlam,*.xlam,*.xlsb,*.xlsm,*.xlsx,*.xltm,*.xltx,*.xpi,*.zip'
@@ -365,8 +365,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0 " recomemnded 1, default 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"let g:syntastic_mode_map = {
+"    \ "mode": "active",
+"    \ "passive_filetypes": ["markdown"] }
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_typescript_checkers = ["tslint"]
+let g:syntastic_markdown_checkers = ["textlint"]
+let g:syntastic_markdown_textlint_exec = "npx"
+let g:syntastic_markdown_textlint_exe = "npx textlint"
 if filereadable("~/dotfiles/.mdlrc")
     let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
 endif
