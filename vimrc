@@ -64,6 +64,7 @@ if !empty(glob(s:plugvim))
     Plug 'tyru/skkdict.vim/'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    Plug 'prettier/vim-prettier'
     Plug 'vim-scripts/SyntaxComplete'
     Plug 'vim-scripts/Tail-Bundle'
     Plug 'vim-syntastic/syntastic'
