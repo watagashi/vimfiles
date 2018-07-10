@@ -67,11 +67,12 @@ if !empty(glob(s:plugvim))
     Plug 'prettier/vim-prettier'
     Plug 'vim-scripts/SyntaxComplete'
     Plug 'vim-scripts/Tail-Bundle'
-    Plug 'vim-syntastic/syntastic'
+    " Plug 'vim-syntastic/syntastic'
     Plug 'twitvim/twitvim'
     Plug 'vim-scripts/loremipsum'
     Plug 'vim-scripts/taglist.vim'
     Plug 'vim-scripts/vcscommand.vim'
+    Plug 'w0rp/ale'
     Plug 'wavded/vim-stylus'
 
     " skk
@@ -373,10 +374,10 @@ let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_typescript_checkers = ["tslint"]
 let g:syntastic_markdown_checkers = ["textlint"]
 let g:syntastic_markdown_textlint_exec = "npx"
-let g:syntastic_markdown_textlint_exe = "npx textlint"
-if filereadable("~/dotfiles/.mdlrc")
-    let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
-endif
+let g:syntastic_markdown_textlint_exe = "npx remark"
+"if filereadable("~/dotfiles/.mdlrc")
+"    let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
+"endif
 
 " set vim-airline
 let g:airline_theme='light'
