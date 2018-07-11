@@ -72,7 +72,7 @@ if !empty(glob(s:plugvim))
     Plug 'vim-scripts/loremipsum'
     Plug 'vim-scripts/taglist.vim'
     Plug 'vim-scripts/vcscommand.vim'
-    Plug 'w0rp/ale'
+    Plug 'w0rp/ale', { 'frozen': 1 }
     Plug 'wavded/vim-stylus'
 
     " skk
