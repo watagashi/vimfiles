@@ -27,6 +27,7 @@ if !empty(glob(s:plugvim))
     Plug 'Chiel92/vim-autoformat'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'JarrodCTaylor/vim-js2coffee'
+    Plug 'Kuniwak/vint'
     Plug 'PProvost/vim-ps1'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Shougo/neosnippet-snippets'
@@ -45,6 +46,7 @@ if !empty(glob(s:plugvim))
     Plug 'jelera/vim-javascript-syntax'
     Plug 'jmcantrell/vim-diffchanges'
     Plug 'junegunn/vim-emoji'
+    Plug 'junegunn/vader.vim'
     Plug 'kannokanno/previm'
     Plug 'kchmck/vim-coffee-script'
     Plug 'ludovicchabant/vim-lawrencium'
@@ -55,6 +57,7 @@ if !empty(glob(s:plugvim))
     Plug 'othree/javascript-libraries-syntax.vim'
     Plug 'plasticboy/vim-markdown'
     Plug 'sbdchd/neoformat'
+    Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-rhubarb'
     Plug 'ternjs/tern_for_vim', { 'do': 'yarn --no-progress \|\| npm i' }
     Plug 'timcharper/textile.vim'
