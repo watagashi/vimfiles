@@ -433,4 +433,7 @@ let g:neoformat_markdown_prettier = {
     \       'stdin': 1
     \   }
 
+" vim-json
+let g:vim_json_syntax_conceal = 0
+
 colorscheme desert
