@@ -14,8 +14,8 @@ endif
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 let s:plugvim = s:vimfiles . '/autoload/plug.vim'
 if empty(glob(s:plugvim))
-    execute "silent !curl -fLo " . s:plugvim . " --create-dirs "
-                \ . "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+    execute 'silent !curl -fLo " . s:plugvim . " --create-dirs '
+                \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -107,10 +107,10 @@ if $TERM == 'cygwin'
     set encoding=cp932
 endif
 
-if exists("$TEMP")
+if exists('$TEMP')
     set directory=$TEMP
     set undodir=$TEMP
-elseif exists("$TMPDIR")
+elseif exists('$TMPDIR')
     set directory=$TMPDIR
     set undodir=$TMPDIR
 endif
@@ -125,7 +125,7 @@ set listchars+=tab:>-
 set path+=./**,**
 set diffopt+=iwhite
 set printoptions+=formfeed:y
-if (version == 703 && has("patch72")) || version > 703
+if (version == 703 && has('patch72')) || version > 703
     set wildignorecase
 endif
 set visualbell
@@ -139,8 +139,8 @@ set cryptmethod=blowfish2
 
 " See
 "   :help color-xterm
-if &term =~ "xterm" && &t_Co<2
-    if has("terminfo")
+if &term =~ 'xterm' && &t_Co<2
+    if has('terminfo')
       set t_Co=16
       set t_AB=[%?%p1%{8}%<%t%p1%{40}%+%e%p1%{92}%+%;%dm
       set t_AF=[%?%p1%{8}%<%t%p1%{30}%+%e%p1%{82}%+%;%dm
@@ -162,7 +162,7 @@ else
     set fileencodings-=latin1
 endif
 
-if has("autocmd")
+if has('autocmd')
     autocmd FileType text setlocal textwidth=78 expandtab tabstop=4 shiftwidth=4
     autocmd BufNewFile,BufRead .{textlint,jshint,eslint,jscs,jsbeautify}rc setf json
 endif
@@ -246,7 +246,7 @@ let g:html_use_css = 1
 
 " File Explorer
 let g:explDetailedList=1
-let g:explDateFormat="%x %X"
+let g:explDateFormat='%x %X'
 let g:netrw_fastbrowse=2
 
 " vcscommand
@@ -339,11 +339,11 @@ set formatexpr=autofmt#compat#formatexpr()
 
 " calendar.vim
 " http://www.vim.org/scripts/script.php?script_id=52
-if !exists("g:calendar_diary")
-    if isdirectory(expand("~/Documents/diary"))
-        let g:calendar_diary = "~/Documents/diary"
-    elseif isdirectory(expand("~/Dropbox/Dillinger/diary"))
-        let g:calendar_diary = "~/Dropbox/Dillinger/diary"
+if !exists('g:calendar_diary')
+    if isdirectory(expand('~/Documents/diary'))
+        let g:calendar_diary = '~/Documents/diary'
+    elseif isdirectory(expand('~/Dropbox/Dillinger/diary'))
+        let g:calendar_diary = '~/Dropbox/Dillinger/diary'
     endif
 endif
 
@@ -374,11 +374,11 @@ let g:syntastic_check_on_wq = 0
 "let g:syntastic_mode_map = {
 "    \ "mode": "active",
 "    \ "passive_filetypes": ["markdown"] }
-let g:syntastic_javascript_checkers = ["eslint"]
-let g:syntastic_typescript_checkers = ["tslint"]
-let g:syntastic_markdown_checkers = ["textlint"]
-let g:syntastic_markdown_textlint_exec = "npx"
-let g:syntastic_markdown_textlint_exe = "npx remark"
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['tslint']
+let g:syntastic_markdown_checkers = ['textlint']
+let g:syntastic_markdown_textlint_exec = 'npx'
+let g:syntastic_markdown_textlint_exe = 'npx remark'
 "if filereadable("~/dotfiles/.mdlrc")
 "    let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
 "endif
@@ -386,7 +386,7 @@ let g:syntastic_markdown_textlint_exe = "npx remark"
 " set vim-airline
 let g:airline_theme='light'
 
-if has("autocmd") && exists("+omnifunc")
+if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
     \		setlocal omnifunc=syntaxcomplete#Complete |
