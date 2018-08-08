@@ -27,7 +27,6 @@ if !empty(glob(s:plugvim))
     Plug 'Chiel92/vim-autoformat'
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'JarrodCTaylor/vim-js2coffee'
-    Plug 'Kuniwak/vint'
     Plug 'PProvost/vim-ps1'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Shougo/neosnippet-snippets'
