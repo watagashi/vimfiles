@@ -45,6 +45,7 @@ if !empty(glob(s:plugvim))
     Plug 'gregsexton/gitv'
     Plug 'jelera/vim-javascript-syntax'
     Plug 'jmcantrell/vim-diffchanges'
+    Plug 'jparise/vim-graphql'
     Plug 'junegunn/vim-emoji'
     Plug 'junegunn/vader.vim'
     Plug 'kannokanno/previm'
