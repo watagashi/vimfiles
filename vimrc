@@ -2,6 +2,10 @@ scriptencoding utf-8
 
 " vim: set ts=4 sw=4 et ff=unix fenc=utf-8:
 
+if !has('kaoriya')
+    source $VIMRUNTIME/vimrc_example.vim
+endif
+
 let s:vimfiles = isdirectory(expand('~/vimfiles'))
             \ ? expand('~/vimfiles') : expand('~/.vim')
 if has('win32')
