@@ -32,6 +32,7 @@ if !empty(glob(s:plugvim))
     Plug 'HerringtonDarkholme/yats.vim'
     Plug 'JarrodCTaylor/vim-js2coffee'
     Plug 'PProvost/vim-ps1'
+    Plug 'Quramy/tsuquyomi'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Shougo/neosnippet-snippets'
     Plug 'Shougo/neosnippet.vim'
