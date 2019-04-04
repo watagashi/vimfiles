@@ -29,7 +29,8 @@ if !empty(glob(s:plugvim))
     call plug#begin(s:vimfiles . '/plugged')
 
     Plug 'Chiel92/vim-autoformat'
-    Plug 'HerringtonDarkholme/yats.vim'
+    " Plug 'HerringtonDarkholme/yats.vim'
+    Plug 'jason0x43/vim-js-indent'
     Plug 'JarrodCTaylor/vim-js2coffee'
     Plug 'PProvost/vim-ps1'
     Plug 'Quramy/tsuquyomi'
@@ -55,6 +56,7 @@ if !empty(glob(s:plugvim))
     Plug 'junegunn/vader.vim'
     Plug 'kannokanno/previm'
     Plug 'kchmck/vim-coffee-script'
+    Plug 'leafgarland/typescript-vim'
     Plug 'ludovicchabant/vim-lawrencium'
     Plug 'mattn/calendar-vim'
     Plug 'mattn/emmet-vim'
