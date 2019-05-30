@@ -64,6 +64,7 @@ if !empty(glob(s:plugvim))
     Plug 'nathanaelkane/vim-indent-guides'
     Plug 'othree/javascript-libraries-syntax.vim'
     Plug 'plasticboy/vim-markdown'
+    Plug 'rhysd/git-messenger.vim'
     Plug 'sbdchd/neoformat'
     Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-rhubarb'
