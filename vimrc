@@ -62,7 +62,7 @@ if !empty(glob(s:plugvim))
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-signify'
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'othree/javascript-libraries-syntax.vim'
+    " Plug 'othree/javascript-libraries-syntax.vim'
     Plug 'plasticboy/vim-markdown'
     Plug 'rhysd/git-messenger.vim'
     Plug 'sbdchd/neoformat'
@@ -370,6 +370,7 @@ autocmd BufReadPre *.js     let b:javascript_lib_use_angularuirouter = 1
 autocmd BufReadPre *.htm    let b:javascript_lib_use_angularuirouter = 1
 autocmd BufReadPre *.html   let b:javascript_lib_use_angularuirouter = 1
 autocmd BufReadPre *.js     let b:javascript_lib_use_jasmine = 1
+autocmd BufReadPre *.ts     let b:javascript_lib_use_jasmine = 1
 autocmd BufReadPre *.js     let b:javascript_lib_use_chai = 1
 
 " Syntastic
@@ -445,5 +446,8 @@ let g:neoformat_markdown_prettier = {
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
+"
+" ale
+" let g:ale_lint_on_enter = 0
 
 colorscheme desert
