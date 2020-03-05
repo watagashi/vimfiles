@@ -92,14 +92,14 @@ if !empty(glob(s:plugvim))
     " if filereadable("//VBOXSVR/twada/.skk-jisyo")
     "    let g:skk_jisyo = "//VBOXSVR/twada/.skk-jisyo"
     " else
-    if filereadable(s:vimfiles . '/dict/SKK-JISYO.L')
+    if filereadable(s:vimfiles . '/dict/SKK-JISYO.L') && !isdirectory($APPDATA . '/CorvusSKK')
         Plug 'tyru/skk.vim/'
         if !exists('g:skk_large_jisyo')
             let g:skk_large_jisyo = s:vimfiles . '/dict/SKK-JISYO.L'
         endif
+        let g:skk_show_annotation=1
+        let g:skk_egg_like_newline=1
     endif
-    let g:skk_show_annotation=1
-    let g:skk_egg_like_newline=1
 
     call plug#end()
 
