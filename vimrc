@@ -39,6 +39,7 @@ if !empty(glob(s:plugvim))
     Plug 'Shougo/neosnippet.vim'
     Plug 'burnettk/vim-angular'
     Plug 'chrisbra/csv.vim'
+    Plug 'chrisbra/unicode.vim'
     Plug 'cohama/agit.vim'
     Plug 'digitaltoad/vim-jade'
     Plug 'editorconfig/editorconfig-vim'
