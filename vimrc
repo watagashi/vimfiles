@@ -2,12 +2,23 @@ scriptencoding utf-8
 
 " vim: set ts=4 sw=4 et ff=unix fenc=utf-8:
 
-if !has('kaoriya')
-    source $VIMRUNTIME/vimrc_example.vim
-endif
-
 let s:vimfiles = isdirectory(expand('~/vimfiles'))
             \ ? expand('~/vimfiles') : expand('~/.vim')
+
+" Mainly for MacVim without Kaoriya
+" !git clone https://github.com/koron/vim-kaoriya.git ~/.vim/vim-kaoriya
+if !has('kaoriya') && filereadable(s:vimfiles . '/vim-kaoriya/kaoriya/vim/vimrc')
+    let s:vim = $VIM
+    let $VIM = s:vimfiles . '/vim-kaoriya/kaoriya/vim'
+    execute 'source ' . $VIM . '/vimrc'
+    let $VIM = s:vim
+    unlet s:vim
+    set encoding=utf-8
+    set fileencodings-=ucs-2le,ucs-2
+    set ambiwidth=double
+    set printmbfont=r:HiraMinProN-W3,b:HiraMinProN-W6
+endif
+
 if has('win32')
     if $HOME=='' && has('win32')
         let $HOME=$USERPROFILE
@@ -78,6 +89,9 @@ if !empty(glob(s:plugvim))
     Plug 'tyru/skkdict.vim/'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
+    if !has('kaoriya')
+        Plug 'vim-jp/vimdoc-ja'
+    endif
     Plug 'prettier/vim-prettier'
     Plug 'vim-scripts/SyntaxComplete'
     Plug 'vim-scripts/Tail-Bundle'
