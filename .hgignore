@@ -20,3 +20,5 @@ GetLatest/GetLatestVimScripts.dat
 dict/SKK-JISYO.L
 doc/tags
 doc/tags-*
+
+vim-kaoriya/**
