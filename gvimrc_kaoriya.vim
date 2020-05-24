@@ -4,7 +4,7 @@ scriptencoding utf-8
 let s:vimfiles = isdirectory(expand('~/vimfiles'))
       \ ? expand('~/vimfiles') : expand('~/.vim')
 
-" Mainly for MacVim without Kaoriya
+" Mainly for MacVim without KaoriYa
 " !git clone https://github.com/koron/vim-kaoriya.git ~/.vim/vim-kaoriya
 if !has('kaoriya') && filereadable(s:vimfiles . '/vim-kaoriya/kaoriya/vim/gvimrc')
   let s:vim = $VIM
