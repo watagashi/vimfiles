@@ -20,5 +20,7 @@ if !has('kaoriya') && filereadable(s:vimfiles . '/vim-kaoriya/kaoriya/vim/vimrc'
   set fileencodings=ucs-bom,utf-8,iso-2022-jp-3,euc-jisx0213,euc-jp,cp932
 
   set ambiwidth=double
-  set printmbfont=r:HiraMinProN-W3,b:HiraMinProN-W6
+  if has('osxdarwin')
+    set printmbfont=r:HiraMinProN-W3,b:HiraMinProN-W6
+  endif
 endif
