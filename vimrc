@@ -5,19 +5,7 @@ scriptencoding utf-8
 let s:vimfiles = isdirectory(expand('~/vimfiles'))
             \ ? expand('~/vimfiles') : expand('~/.vim')
 
-" Mainly for MacVim without Kaoriya
-" !git clone https://github.com/koron/vim-kaoriya.git ~/.vim/vim-kaoriya
-if !has('kaoriya') && filereadable(s:vimfiles . '/vim-kaoriya/kaoriya/vim/vimrc')
-    let s:vim = $VIM
-    let $VIM = s:vimfiles . '/vim-kaoriya/kaoriya/vim'
-    execute 'source ' . $VIM . '/vimrc'
-    let $VIM = s:vim
-    unlet s:vim
-    set encoding=utf-8
-    set fileencodings-=ucs-2le,ucs-2
-    set ambiwidth=double
-    set printmbfont=r:HiraMinProN-W3,b:HiraMinProN-W6
-endif
+source <sfile>_kaoriya.vim
 
 if has('win32')
     if $HOME=='' && has('win32')
