@@ -14,7 +14,7 @@ if has('win32')
     let s:pg = $ProgramFiles
 endif
 
-" https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
+" https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
 let s:plugvim = s:vimfiles . '/autoload/plug.vim'
 if empty(glob(s:plugvim))
     execute 'silent !curl -fLo ' . s:plugvim . ' --create-dirs '
