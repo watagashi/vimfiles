@@ -17,7 +17,7 @@ endif
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 let s:plugvim = s:vimfiles . '/autoload/plug.vim'
 if empty(glob(s:plugvim))
-    execute 'silent !curl -fLo " . s:plugvim . " --create-dirs '
+    execute 'silent !curl -fLo ' . s:plugvim . ' --create-dirs '
                 \ . 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
@@ -462,6 +462,9 @@ let g:vim_json_syntax_conceal = 0
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
 
-source <sfile>_coc.vim
+" coc https://github.com/neoclide/coc.nvim
+if exists('g:did_coc_loaded')
+    source <sfile>_coc.vim
+endif
 
 colorscheme desert
