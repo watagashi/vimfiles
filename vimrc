@@ -62,13 +62,13 @@ if !empty(glob(s:plugvim))
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-signify'
     Plug 'nathanaelkane/vim-indent-guides'
-    " Plug 'othree/javascript-libraries-syntax.vim'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'rhysd/git-messenger.vim'
     Plug 'sbdchd/neoformat'
     Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-rhubarb'
-    Plug 'ternjs/tern_for_vim', { 'do': 'yarn --no-progress \|\| npm i' }
+    " Plug 'ternjs/tern_for_vim', { 'do': 'yarn --no-progress \|\| npm i' }
     Plug 'timcharper/textile.vim'
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-fugitive'
@@ -148,6 +148,13 @@ set cryptmethod=blowfish2
 "	set shell=$comspec\ /E:ON\ /F:ON
 "endif
 "source $VIMRUNTIME/macros/jcode.vim
+"
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 
 " See
 "   :help color-xterm
@@ -454,5 +461,7 @@ let g:vim_json_syntax_conceal = 0
 " let g:ale_lint_on_enter = 0
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
+
+source <sfile>_coc.vim
 
 colorscheme desert
