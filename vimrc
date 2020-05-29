@@ -73,7 +73,7 @@ if !empty(glob(s:plugvim))
     Plug 'tpope/vim-abolish'
     Plug 'tpope/vim-fugitive'
     " Plug 'tpope/vim-markdown'
-    Plug 'tyru/open-browser.vim', { 'commit': '57b894d0aa5f800220d25fdeeccf28d8a7f6ac89' }
+    Plug 'tyru/open-browser.vim'
     Plug 'tyru/skkdict.vim/'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
