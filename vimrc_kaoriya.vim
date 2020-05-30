@@ -9,14 +9,15 @@ endif
 
 let s:vimfiles = isdirectory(expand('~/vimfiles'))
       \ ? expand('~/vimfiles') : expand('~/.vim')
+let s:kaoriyavimdirectory = s:vimfiles . '/vim-kaoriya/kaoriya/vim'
 
-if !filereadable(s:vimfiles . '/vim-kaoriya/kaoriya/vim/vimrc')
+if !filereadable(s:kaoriyavimdirectory . '/vimrc')
   echomsg 'vim-kaoriya is not found.'
   finish
 endif
 
 let s:vim = $VIM
-let $VIM = s:vimfiles . '/vim-kaoriya/kaoriya/vim'
+let $VIM = s:kaoriyavimdirectory
 execute 'source ' . $VIM . '/vimrc'
 let $VIM = s:vim
 unlet s:vim
