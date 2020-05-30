@@ -462,9 +462,6 @@ let g:vim_json_syntax_conceal = 0
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
 
-" coc https://github.com/neoclide/coc.nvim
-if exists('g:did_coc_loaded')
-    source <sfile>_coc.vim
-endif
+source <sfile>_coc.vim
 
 colorscheme desert

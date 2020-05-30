@@ -1,3 +1,7 @@
+scriptencoding utf-8 " vim:set ts=8 sts=2 sw=2 tw=0 ff=unix fenc=utf-8:
+
+" https://github.com/neoclide/coc.nvim#example-vim-configuration
+
 " " Use tab for trigger completion with characters ahead and navigate.
 " " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " " other plugin before putting this into your config.
