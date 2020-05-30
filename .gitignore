@@ -1,5 +1,3 @@
-syntax: glob
-
 **~
 **.orig
 **.zip
@@ -21,4 +19,4 @@ dict/SKK-JISYO.L
 doc/tags
 doc/tags-*
 
-vim-kaoriya/**
+vim-kaoriya
