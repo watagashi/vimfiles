@@ -1,0 +1,4 @@
+scriptencoding utf-8
+source <sfile>:p:h/vimrc
+
+" vim: set ts=2 sw=2 et ff=unix fenc=utf-8 ft=vim:

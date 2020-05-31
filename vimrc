@@ -65,6 +65,7 @@ if !empty(glob(s:plugvim))
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'plasticboy/vim-markdown'
     Plug 'rhysd/git-messenger.vim'
+    Plug 'rkitover/vimpager'
     Plug 'sbdchd/neoformat'
     Plug 'tomtom/tcomment_vim'
     Plug 'tpope/vim-rhubarb'
