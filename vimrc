@@ -123,6 +123,9 @@ if exists('$TEMP')
 elseif exists('$TMPDIR')
     set directory=$TMPDIR
     set undodir=$TMPDIR
+elseif exists('$TMP')
+    set directory=$TMP
+    set undodir=$TMP
 endif
 "set backupdir=$TEMP
 set nobackup
