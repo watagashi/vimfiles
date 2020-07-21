@@ -59,7 +59,9 @@ if !empty(glob(s:plugvim))
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-signify'
     Plug 'nathanaelkane/vim-indent-guides'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    if (version == 810 && has('patch1719')) || version > 810
+        Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    endif
     Plug 'plasticboy/vim-markdown'
     Plug 'rhysd/git-messenger.vim'
     Plug 'rkitover/vimpager'
@@ -461,6 +463,8 @@ let g:vim_json_syntax_conceal = 0
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
 
-source <sfile>_coc.vim
+if (version == 810 && has('patch1719')) || version > 810
+    source <sfile>_coc.vim
+endif
 
 colorscheme desert
