@@ -15,8 +15,9 @@ plugged/**
 .netrwhist
 
 GetLatest/GetLatestVimScripts.dat
-dict/SKK-JISYO.L
+dict/SKK-JISYO.*
 doc/tags
 doc/tags-*
 
 vim-kaoriya
+

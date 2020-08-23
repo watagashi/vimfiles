@@ -1,2 +1,3 @@
 #!/bin/zsh
-curl -Lo $(dirname $0)/SKK-JISYO.L http://openlab.ring.gr.jp/skk/skk/dic/SKK-JISYO.L
+for t (L geo zipcode office.zipcode jinmei)
+	curl -Lo $(dirname $0)/SKK-JISYO.$t http://openlab.ring.gr.jp/skk/skk/dic/SKK-JISYO.$t
