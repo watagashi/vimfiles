@@ -58,6 +58,7 @@ if !empty(glob(s:plugvim))
     Plug 'mattn/calendar-vim'
     Plug 'mattn/emmet-vim'
     Plug 'mhinz/vim-signify'
+    Plug 'morhetz/gruvbox'
     Plug 'nathanaelkane/vim-indent-guides'
     if (has('patch-8.1.1719'))
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -467,4 +468,8 @@ if (has('patch-8.1.1719'))
     source <sfile>_coc.vim
 endif
 
-colorscheme desert
+silent! colorscheme gruvbox
+if !exists('g:colors_name') || g:colors_name!='gruvbox'
+    colorscheme desert
+endif
+highlight Pmenu ctermbg=DarkGray

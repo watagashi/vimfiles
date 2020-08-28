@@ -4,16 +4,16 @@ scriptencoding utf-8
 
 source <sfile>_kaoriya.vim
 
-"colorscheme evening
-colorscheme desert
+silent! colorscheme gruvbox
+if !exists('g:colors_name') || g:colors_name!='gruvbox'
+    colorscheme desert
+endif
 if has( 'gui_gtk2' )
   set guifont=Monospace\ 12
 endif
 "set guifont=Terminal:h14:cSHIFTJIS
 
-"highlight Normal guifg=White guibg=grey10
-"highlight Visual guifg=DarkGray
-"set background=dark
+set background=dark
 
 "set nomousefocus
 "set linespace=2
