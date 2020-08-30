@@ -405,9 +405,6 @@ let g:syntastic_markdown_textlint_exe = 'npx remark'
 "    let g:syntastic_markdown_mdl_args="-c ~/dotfiles/.mdlrc"
 "endif
 
-" set vim-airline
-let g:airline_theme='light'
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
