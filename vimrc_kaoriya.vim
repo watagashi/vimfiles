@@ -18,7 +18,7 @@ endif
 
 let s:vim = $VIM
 let $VIM = s:kaoriyavimdirectory
-execute 'source ' . $VIM . '/vimrc'
+execute 'silent! source ' . $VIM . '/vimrc'
 let $VIM = s:vim
 unlet s:vim
 
@@ -31,4 +31,9 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp-3,euc-jisx0213,euc-jp,cp932
 set ambiwidth=double
 if has('osxdarwin')
   set printmbfont=r:HiraMinProN-W3,b:HiraMinProN-W6
+endif
+
+" Reset &term
+if has('unix') && !has('gui_running')
+  set term=$TERM
 endif
