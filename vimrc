@@ -469,4 +469,5 @@ silent! colorscheme gruvbox
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
 endif
+set background=dark
 highlight Pmenu ctermbg=DarkGray
