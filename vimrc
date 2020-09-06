@@ -456,12 +456,12 @@ let g:neoformat_markdown_prettier = {
 " vim-json
 let g:vim_json_syntax_conceal = 0
 "
-" ale
+" ale & coc
 " let g:ale_lint_on_enter = 0
 let g:ale_completion_enabled = 1
 let g:ale_completion_delay = 500
-
 if (has('patch-8.1.1719'))
+    let g:ale_disable_lsp = 1
     source <sfile>_coc.vim
 endif
 
