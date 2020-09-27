@@ -9,12 +9,12 @@ let g:CVSCommandDiffOpt='bBu'
 let g:VCSCommandCVSDiffOpt='bBu'
 if has('win32')
     " msysGit
-    if executable(s:pg . '\Git\bin\git.exe')
-        let g:VCSCommandGitExec= s:pg . '\Git\bin\git.exe'
+    if executable($ProgramFiles .. '\Git\bin\git.exe')
+        let g:VCSCommandGitExec= $ProgramFiles .. '\Git\bin\git.exe'
     endif
     " TortoiseHg for Windows
-    if executable(s:pg . '\TortoiseHg\hg.exe')
-        let g:VCSCommandHGExec= s:pg . '\TortoiseHg\hg.exe'
+    if executable($ProgramFiles .. '\TortoiseHg\hg.exe')
+        let g:VCSCommandHGExec= $ProgramFiles .. '\TortoiseHg\hg.exe'
     endif
 endif
 let $HGENCODING=&encoding

@@ -11,7 +11,6 @@ if has('win32')
     if $HOME=='' && has('win32')
         let $HOME=$USERPROFILE
     endif
-    let s:pg = $ProgramFiles
 endif
 
 " https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
@@ -215,13 +214,6 @@ command! -bar -nargs=0 NoFold setl fdm& fdc&
 command! -bar -nargs=0 Cfold syntax region	cBlock	start="{" end="}" transparent fold | Fold
 
 command! -bar -nargs=0 Ypath let @*=expand('%:p')
-if has('win32')
-    if exists('$JAVA_HOME')
-        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . $JAVA_HOME . '\bin\native2ascii.exe" <args>'
-    else
-        execute 'command! -bar -nargs=? -range=% Jn2a <line1>,<line2>!"' . s:pg . '\java\jdk1.6.0_24\bin\native2ascii.exe" <args>'
-    endif
-endif
 
 command! -bar -range=% Diffnodate <line1>,<line2>s/^\(--- \|+++ \)\f\+\zs.\+//
 

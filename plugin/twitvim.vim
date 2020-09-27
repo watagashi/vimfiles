@@ -25,15 +25,15 @@ if exists('$HTTP_PROXY')
 	\ '%40', '@', 'g')
 endif
 if has('win32')
-  let g:twitvim_browser_cmd = s:pg . '\Vivaldi\Application\vivaldi.exe'
+  let g:twitvim_browser_cmd = $ProgramFiles .. '\Vivaldi\Application\vivaldi.exe'
   if !executable(g:twitvim_browser_cmd)
-    let g:twitvim_browser_cmd = s:pg . '\Opera\opera.exe'
+    let g:twitvim_browser_cmd = $ProgramFiles .. '\Opera\opera.exe'
   endif
   if !executable(g:twitvim_browser_cmd)
-    let g:twitvim_browser_cmd = s:pg . '\Mozilla Firefox\firefox.exe'
+    let g:twitvim_browser_cmd = $ProgramFiles .. '\Mozilla Firefox\firefox.exe'
   endif
   if !executable(g:twitvim_browser_cmd)
-    let g:twitvim_browser_cmd = s:pg . '\Internet Explorer\iexplore.exe'
+    let g:twitvim_browser_cmd = $ProgramFiles .. '\Internet Explorer\iexplore.exe'
   endif
 elseif has('macunix')
   let twitvim_browser_cmd = 'open'
