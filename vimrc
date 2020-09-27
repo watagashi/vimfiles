@@ -348,11 +348,6 @@ vmap gx <Plug>(openbrowser-smart-search)
 " http://www.vim.org/scripts/script.php?script_id=2158
 let g:diffchanges_patch_cmd = 'diff -ubB'
 
-" taglist.vim
-" http://www.vim.org/scripts/script.php?script_id=273
-let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
-                           \ 'v:variable;f:function'
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
