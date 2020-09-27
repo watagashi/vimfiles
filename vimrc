@@ -339,11 +339,6 @@ elseif has('macunix')
     let twitvim_browser_cmd = 'open'
 endif
 
-" open-browser
-let g:netrw_nogx = 1 " disable netrw's gx mapping.
-nmap gx <Plug>(openbrowser-smart-search)
-vmap gx <Plug>(openbrowser-smart-search)
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
