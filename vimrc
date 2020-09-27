@@ -269,26 +269,6 @@ let g:explDetailedList=1
 let g:explDateFormat='%x %X'
 let g:netrw_fastbrowse=2
 
-" vcscommand
-" http://www.vim.org/scripts/script.php?script_id=90
-if v:version < 700
-    let g:VCSCommandDisableAll = 1
-endif
-let g:CVSCommandDiffOpt='bBu'
-let g:VCSCommandCVSDiffOpt='bBu'
-if has('win32')
-    " msysGit
-    if executable(s:pg . '\Git\bin\git.exe')
-        let g:VCSCommandGitExec= s:pg . '\Git\bin\git.exe'
-    endif
-    " TortoiseHg for Windows
-    if executable(s:pg . '\TortoiseHg\hg.exe')
-        let g:VCSCommandHGExec= s:pg . '\TortoiseHg\hg.exe'
-    endif
-endif
-let $HGENCODING=&encoding
-command! -bar -nargs=1 Setenc set enc=<args> | let $HGENCODING='<args>'
-
 " GetScript
 let g:GetLatestVimScripts_wget='curl'
 
