@@ -419,11 +419,6 @@ let g:Gitv_OpenHorizontal='auto'
 " agit
 " let g:agit_ignore_spaces=0
 
-" EditorConfig
-if has('win32')
-    let g:EditorConfig_exclude_patterns = ['[^\x01-\x7e]']
-endif
-
 " NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 
