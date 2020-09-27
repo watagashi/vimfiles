@@ -283,9 +283,6 @@ autocmd Filetype *
     \	endif
 endif
 
-" NeoComplete
-"let g:neocomplete#enable_at_startup = 1
-
 silent! colorscheme gruvbox
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
