@@ -369,9 +369,6 @@ if !exists('g:calendar_diary')
     endif
 endif
 
-" previm
-let g:previm_enable_realtime = 1
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
