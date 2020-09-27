@@ -283,9 +283,6 @@ autocmd Filetype *
     \	endif
 endif
 
-" agit
-" let g:agit_ignore_spaces=0
-
 " NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 
