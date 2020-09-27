@@ -424,9 +424,6 @@ if has('win32')
     let g:EditorConfig_exclude_patterns = ['[^\x01-\x7e]']
 endif
 
-" Tabular
-command! -range TextileTabularize <line1>,<line2>Tabularize /|\([^.|]*\.\)\=\(\s\|$\)
-
 " NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 
