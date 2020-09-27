@@ -357,18 +357,6 @@ let g:tlist_esqlc_settings = 'c;d:macro;g:enum;s:struct;u:union;t:typedef;' .
 " http://www.vim.org/scripts/script.php?script_id=1939
 set formatexpr=autofmt#compat#formatexpr()
 
-" calendar.vim
-" http://www.vim.org/scripts/script.php?script_id=52
-if !exists('g:calendar_diary')
-    if exists('$APPDATA') && isdirectory(expand('$APPDATA/diary'))
-        let g:calendar_diary = expand('$APPDATA/diary')
-    elseif isdirectory(expand('~/Documents/diary'))
-        let g:calendar_diary = '~/Documents/diary'
-    elseif isdirectory(expand('~/Dropbox/Dillinger/diary'))
-        let g:calendar_diary = '~/Dropbox/Dillinger/diary'
-    endif
-endif
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
