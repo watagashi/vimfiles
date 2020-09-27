@@ -454,9 +454,6 @@ let g:neoformat_markdown_prettier = {
     \       'stdin': 1
     \   }
 
-" vim-json
-let g:vim_json_syntax_conceal = 0
-
 silent! colorscheme gruvbox
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
