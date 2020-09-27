@@ -1,5 +1,11 @@
 scriptencoding utf-8 " vim:set ts=8 sts=2 sw=2 tw=0 ff=unix fenc=utf-8:
 
+if !has('patch-8.1.1719')
+  finish
+endif
+
+let g:ale_disable_lsp = 1
+
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
 " " Use tab for trigger completion with characters ahead and navigate.
