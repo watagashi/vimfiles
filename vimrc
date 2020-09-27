@@ -457,11 +457,6 @@ let g:neoformat_markdown_prettier = {
 " vim-json
 let g:vim_json_syntax_conceal = 0
 
-" ale
-" let g:ale_lint_on_enter = 0
-let g:ale_completion_enabled = 1
-let g:ale_completion_delay = 500
-
 silent! colorscheme gruvbox
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
