@@ -283,9 +283,6 @@ autocmd Filetype *
     \	endif
 endif
 
-" Gitv
-let g:Gitv_OpenHorizontal='auto'
-
 " agit
 " let g:agit_ignore_spaces=0
 
