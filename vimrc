@@ -296,10 +296,6 @@ let g:GetLatestVimScripts_wget='curl'
 " let g:changelog_timeformat='%c'
 let g:changelog_username=$username
 
-" zen-coding
-" http://www.vim.org/scripts/script.php?script_id=2981
-let g:user_zen_settings = {'lang':'ja'}
-
 if has('autocmd') && exists('+omnifunc')
 autocmd Filetype *
     \	if &omnifunc == "" |
