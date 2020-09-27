@@ -434,26 +434,6 @@ command! -range Emoji <line1>,<line2>s/:\([0-9A-Za-z_+-]\+\):/\=emoji#for(submat
 " NeoComplete
 "let g:neocomplete#enable_at_startup = 1
 
-" NeoFormat
-let g:neoformat_enabled_javascript = ['prettier', 'js-beautify']
-let g:neoformat_javascript_prettier = {
-    \       'exe': 'prettier',
-    \       'args': ['--single-quote', '--stdin'],
-    \       'stdin': 1
-    \   }
-let g:neoformat_enabled_json = ['prettier']
-let g:neoformat_json_prettier = {
-    \       'exe': 'prettier',
-    \       'args': ['--stdin-filepath in.json'],
-    \       'stdin': 1
-    \   }
-let g:neoformat_enabled_markdown = ['prettier']
-let g:neoformat_markdown_prettier = {
-    \       'exe': 'prettier',
-    \       'args': ['--tab-width 4', '--stdin-filepath in.md'],
-    \       'stdin': 1
-    \   }
-
 silent! colorscheme gruvbox
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
