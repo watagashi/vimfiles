@@ -22,7 +22,9 @@ if empty(glob(s:plugvim))
 endif
 
 if !empty(glob(s:plugvim))
-    let g:plug_threads = 8
+    if has('win32')
+        let g:plug_threads = 8
+    endif
 
     call plug#begin(s:vimfiles . '/plugged')
 
