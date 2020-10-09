@@ -57,7 +57,6 @@ if !empty(glob(s:plugvim))
     Plug 'ludovicchabant/vim-lawrencium'
     Plug 'mattn/calendar-vim'
     Plug 'mattn/emmet-vim'
-    Plug 'mhinz/vim-signify'
     Plug 'morhetz/gruvbox'
     Plug 'nathanaelkane/vim-indent-guides'
     if (has('patch-8.1.1719'))
