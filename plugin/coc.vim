@@ -5,6 +5,7 @@ if !has('patch-8.1.1719')
 endif
 
 let g:ale_disable_lsp = 1
+let g:ale_completion_enabled = 0
 
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
 
