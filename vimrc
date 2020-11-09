@@ -277,7 +277,9 @@ autocmd Filetype *
     \	endif
 endif
 
-silent! colorscheme gruvbox
+if !has('win32') || has('gui_running')
+    silent! colorscheme gruvbox
+endif
 if !exists('g:colors_name') || g:colors_name!='gruvbox'
     colorscheme desert
 endif
