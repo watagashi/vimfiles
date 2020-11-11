@@ -25,7 +25,10 @@ if exists('$HTTP_PROXY')
 	\ '%40', '@', 'g')
 endif
 if has('win32')
-  let g:twitvim_browser_cmd = $ProgramFiles .. '\Vivaldi\Application\vivaldi.exe'
+  let g:twitvim_browser_cmd = $LOCALAPPDATA .. '\Vivaldi\Application\vivaldi.exe'
+  if !executable(g:twitvim_browser_cmd)
+    let g:twitvim_browser_cmd = $ProgramFiles .. '\Vivaldi\Application\vivaldi.exe'
+  endif
   if !executable(g:twitvim_browser_cmd)
     let g:twitvim_browser_cmd = $ProgramFiles .. '\Opera\opera.exe'
   endif
