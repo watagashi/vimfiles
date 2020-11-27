@@ -81,7 +81,9 @@ if !empty(glob(s:plugvim))
     if !has('kaoriya')
         Plug 'vim-jp/vimdoc-ja'
     endif
-    Plug 'prettier/vim-prettier'
+    Plug 'prettier/vim-prettier', {
+      \ 'do': 'yarn install',
+      \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
     Plug 'vim-scripts/SyntaxComplete'
     Plug 'vim-scripts/Tail-Bundle'
     " Plug 'vim-syntastic/syntastic'
