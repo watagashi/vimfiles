@@ -22,7 +22,7 @@ if empty(glob(s:plugvim))
 endif
 
 if !empty(glob(s:plugvim))
-    if has('win32')
+    if has('win32') && exists('$NUMBER_OF_PROCESSORS') && $NUMBER_OF_PROCESSORS < 5
         let g:plug_threads = 8
     endif
 
