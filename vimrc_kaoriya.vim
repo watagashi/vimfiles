@@ -12,7 +12,7 @@ let s:vimfiles = isdirectory(expand('~/vimfiles'))
 let s:kaoriyavimdirectory = s:vimfiles . '/vim-kaoriya/kaoriya/vim'
 
 if !filereadable(s:kaoriyavimdirectory . '/vimrc')
-  echomsg 'vim-kaoriya is not found.'
+  echomsg 'vim-kaoriya not found.'
   finish
 endif
 
