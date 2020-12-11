@@ -33,9 +33,9 @@ if has( 'win32' )
   "command! -bar HD set guifont=MS_Gothic:h9:cSHIFTJIS columns=136 lines=48
 
   " Vim technique bible 1-9 (pp.39)
-  let g:IMState = 0
-  autocmd InsertEnter * let &iminsert = g:IMState
-  autocmd InsertLeave * let g:IMState = &iminsert|set iminsert=0 imsearch=0
+  " let g:IMState = 0
+  " autocmd InsertEnter * let &iminsert = g:IMState
+  " autocmd InsertLeave * let g:IMState = &iminsert|set iminsert=0 imsearch=0
 endif
 
 " Vim technique bible 2-15
@@ -50,7 +50,9 @@ if has('multi_byte_ime') || has('xim')
   " IME ON時のカーソルの色を設定(設定例:紫)
   highlight CursorIM guibg=Purple guifg=NONE
   " 挿入モードでのIME状態を記憶させない場合、次行のコメントを解除
-  inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+  " inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
+  " または
+  autocmd InsertLeave * set iminsert=0
 endif
 
 "MenuLang v:lang
