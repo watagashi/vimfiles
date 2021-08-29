@@ -25,8 +25,12 @@ if !empty(glob(s:plugvim))
     if has('win32') && exists('$NUMBER_OF_PROCESSORS') && $NUMBER_OF_PROCESSORS < 5
         let g:plug_threads = 8
     endif
+    let s:plugin_directory = s:vimfiles . '/plugged'
+    if exists('$APPDATA') && isdirectory($APPDATA)
+        let s:plugin_directory = expand($APPDATA . '/vim-plugged')
+    endif
 
-    call plug#begin(s:vimfiles . '/plugged')
+    call plug#begin(s:plugin_directory)
 
     Plug 'Chiel92/vim-autoformat'
     Plug 'jason0x43/vim-js-indent'
