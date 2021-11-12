@@ -93,10 +93,10 @@ if !empty(glob(s:plugvim))
     " Plug 'vim-syntastic/syntastic'
     Plug 'twitvim/twitvim'
     Plug 'vim-scripts/loremipsum'
-    Plug 'vim-scripts/taglist.vim'
     Plug 'vim-scripts/vcscommand.vim'
     Plug 'w0rp/ale'
     Plug 'wavded/vim-stylus'
+    Plug 'yegappan/taglist'
 
     " skk
     " if filereadable("//VBOXSVR/twada/.skk-jisyo")
