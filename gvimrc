@@ -10,8 +10,9 @@ if !exists('g:colors_name') || g:colors_name!='gruvbox'
 endif
 if has( 'gui_gtk2' )
   set guifont=Monospace\ 12
+elseif has('gui_win32')
+  set guifont=Consolas:h12 guifontwide=BIZ_UDGothic:h12
 endif
-"set guifont=Terminal:h14:cSHIFTJIS
 
 set background=dark
 
