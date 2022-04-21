@@ -1,5 +1,6 @@
 {
   "diagnostic.displayByAle": true,
+  "prettier.singleQuote": true,
   "pylsp.builtin.enableInstallPythonLspBlack": true,
   "pylsp.plugins.black.line_length": 120,
   "pylsp.plugins.pycodestyle.ignore": ["E501"],
