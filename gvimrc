@@ -11,7 +11,7 @@ endif
 if has( 'gui_gtk2' )
   set guifont=Monospace\ 12
 elseif has('gui_win32')
-  set guifont=Consolas:h12 guifontwide=BIZ_UDGothic:h12
+  set guifont=Consolas:h12 guifontwide=UD_デジタル_教科書体_N-R:h12 " guifontwide=BIZ_UDGothic:h12
 endif
 
 set background=dark
