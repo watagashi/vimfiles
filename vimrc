@@ -33,7 +33,6 @@ if !empty(glob(s:plugvim))
     call plug#begin(s:plugin_directory)
 
     Plug 'Chiel92/vim-autoformat'
-    Plug 'jason0x43/vim-js-indent'
     Plug 'PProvost/vim-ps1'
     Plug 'Shougo/neocomplete.vim'
     Plug 'Shougo/neosnippet-snippets'
