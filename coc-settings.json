@@ -2,5 +2,6 @@
   "diagnostic.displayByAle": true,
   "prettier.singleQuote": true,
   "pylsp.builtin.enableInstallPythonLspBlack": true,
+  "suggest.asciiCharactersOnly": true,
   "suggest.minTriggerInputLength": 3
 }
