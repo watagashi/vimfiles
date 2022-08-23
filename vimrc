@@ -87,7 +87,6 @@ if !empty(glob(s:plugvim))
     Plug 'prettier/vim-prettier', {
       \ 'do': 'yarn install',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
-    Plug 'vim-scripts/SyntaxComplete'
     Plug 'vim-scripts/Tail-Bundle'
     " Plug 'vim-syntastic/syntastic'
     Plug 'twitvim/twitvim'
