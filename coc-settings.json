@@ -4,5 +4,6 @@
   "pylsp.builtin.enableInstallPythonLspBlack": true,
   "pylsp.plugins.autopep8.enabled": false,
   "suggest.asciiCharactersOnly": true,
-  "suggest.minTriggerInputLength": 3
+  "suggest.minTriggerInputLength": 3,
+  "suggest.noselect": true
 }
