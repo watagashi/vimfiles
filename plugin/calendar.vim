@@ -11,3 +11,5 @@ if !exists('g:calendar_diary')
     let g:calendar_diary = '~/Dropbox/Dillinger/diary'
   endif
 endif
+
+command! -nargs=0 NewDiary exec 'Hgcd' | exec 'Hg cp ' . expand('%') . strftime(' %Y/%m/%d.md')
