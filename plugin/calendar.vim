@@ -12,4 +12,4 @@ if !exists('g:calendar_diary')
   endif
 endif
 
-command! -nargs=0 NewDiary exec 'Hgcd' | exec 'Hg cp ' . expand('%') . strftime(' %Y/%m/%d.md')
+command! -nargs=0 NewDiary exec 'Hgcd' | exec 'Hg cp ' . expand('%') . strftime(' %Y/%m/%d.md') | exec strftime('e %Y/%m/%d.md')
