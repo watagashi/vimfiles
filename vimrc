@@ -86,7 +86,6 @@ if !empty(glob(s:plugvim))
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
     Plug 'vim-scripts/Tail-Bundle'
     " Plug 'vim-syntastic/syntastic'
-    Plug 'twitvim/twitvim'
     Plug 'vim-scripts/loremipsum'
     Plug 'vim-scripts/vcscommand.vim'
     Plug 'w0rp/ale'
