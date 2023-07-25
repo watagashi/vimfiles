@@ -1,5 +1,4 @@
 {
-  "diagnostic.displayByAle": true,
   "prettier.singleQuote": true,
   "pylsp.builtin.enableInstallPythonLspBlack": true,
   "pylsp.plugins.autopep8.enabled": false,

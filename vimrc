@@ -88,7 +88,7 @@ if !empty(glob(s:plugvim))
     " Plug 'vim-syntastic/syntastic'
     Plug 'vim-scripts/loremipsum'
     Plug 'vim-scripts/vcscommand.vim'
-    Plug 'w0rp/ale'
+    " Plug 'w0rp/ale'
     Plug 'wavded/vim-stylus'
     Plug 'yegappan/taglist'
 
