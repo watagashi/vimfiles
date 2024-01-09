@@ -36,6 +36,7 @@ if !empty(glob(s:plugvim))
     Plug 'PProvost/vim-ps1'
     Plug 'burnettk/vim-angular'
     " Plug 'chrisbra/csv.vim'
+    Plug 'cakebaker/scss-syntax.vim'
     Plug 'chrisbra/unicode.vim'
     Plug 'cohama/agit.vim'
     Plug 'digitaltoad/vim-jade'
