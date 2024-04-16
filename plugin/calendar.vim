@@ -6,7 +6,9 @@ command! -nargs=0 NewDiary exec 'cd ' . g:calendar_diary | exec strftime('f %Y/%
 
 if !exists('g:calendar_diary')
   if exists('$APPDATA') && isdirectory(expand('$APPDATA/diary'))
-    command! -nargs=0 NewDiary exec 'Hgcd' | exec 'Hg cp ' . expand('%') . strftime(' %Y/%m/%d.md') | exec strftime('e %Y/%m/%d.md')
+    if isdirectory(expand('$APPDATA/diary/.hg'))
+      command! -nargs=0 NewDiary exec 'Hgcd' | exec 'Hg cp ' . expand('%') . strftime(' %Y/%m/%d.md') | exec strftime('e %Y/%m/%d.md')
+    endif
     let g:calendar_diary = expand('$APPDATA/diary')
   elseif exists('$OneDrive') && isdirectory(expand('$OneDrive/Documents/diary'))
     let g:calendar_diary = expand('$OneDrive/Documents/diary')
