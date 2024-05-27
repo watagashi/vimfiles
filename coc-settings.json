@@ -4,7 +4,7 @@
   "pylsp.plugins.pycodestyle.enabled": false,
   "pylsp.plugins.pyflakes.enabled": false,
   "pylsp.plugins.mccabe.enabled": false,
-  "pylsp.plugins.pyls_isort.enabled": false,
+  "pylsp.plugins.ruff.format": "I",
   "suggest.asciiCharactersOnly": true,
   "suggest.minTriggerInputLength": 3,
   "suggest.noselect": true
