@@ -83,7 +83,7 @@ if !empty(glob(s:plugvim))
         Plug 'vim-jp/vimdoc-ja'
     endif
     Plug 'prettier/vim-prettier', {
-      \ 'do': 'yarn install',
+      \ 'do': 'npm install --omit=dev',
       \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'] }
     Plug 'vim-scripts/Tail-Bundle'
     " Plug 'vim-syntastic/syntastic'
